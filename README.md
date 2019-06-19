@@ -4,7 +4,7 @@ This repository is the source code for the PreTeXt Basics Reference,
 which is a example-heavy reference for the basic features of PreTeXt.
 
 The HTML and PDF output will soon be posted publicly on the
-[PreTeXt website]{https://pretextbook.org/). This README will be
+[PreTeXt website](https://pretextbook.org/). This README will be
 updated with direct links when they are available.
 
 ## Contributing
