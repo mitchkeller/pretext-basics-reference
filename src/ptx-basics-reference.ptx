@@ -92,7 +92,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
 
             <listing xml:id="l-section-primitive">
                 <caption>The general outline of a section as a model division</caption>
-                <idx><h>section</h><h>example code</h></idx>
+                <idx><h>section</h><h><pretext/> code</h></idx>
                 <program><input><xi:include href="section.ptx" parse="text"/></input> </program>
             </listing>
 
@@ -183,7 +183,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <p>You can use <c>definition</c> essentially like <c>theorem</c>, but a <c>definition</c> cannot have a proof. You are encouraged to use the <c>term</c> tag to set off the word being defined. If you wish to include a list of notation to an appendix as your document, you might also add a <c>notation</c> tag such as shown in <xref ref="l-definition" />.</p>
             <listing xml:id="l-definition">
                 <caption>A definition with notation</caption>
-                <idx><h>definition</h><h>example code</h></idx>
+                <idx><h>definition</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="definition.ptx" parse="text"/></input>
                 </program>
@@ -197,7 +197,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             </p>
             <listing xml:id="l-example-simple">
                 <caption>A simple example</caption>
-                <idx><h>example</h><h>unstructured</h><h>example code</h></idx>
+                <idx><h>example</h><h>unstructured</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="example-simple.ptx" parse="text"/></input>
                 </program>
@@ -206,7 +206,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <xi:include href="example-simple.ptx" />
             <listing xml:id="l-example-structured">
                 <caption>A structured example</caption>
-                <idx><h>example</h><h>structured</h><h>example code</h></idx>
+                <idx><h>example</h><h>structured</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="example-structured.ptx" parse="text"/></input>
                 </program>
@@ -222,7 +222,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             </p>
             <listing xml:id="l-remark">
                 <caption>A remark</caption>
-                <idx><h>remark</h><h>example code</h></idx>
+                <idx><h>remark</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="remark.ptx" parse="text"/></input>
                 </program>
@@ -237,7 +237,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             </p>
             <listing xml:id="l-project">
                 <caption>A project</caption>
-                <idx><h>project</h><h>example code</h></idx>
+                <idx><h>project</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="project.ptx" parse="text"/></input>
                 </program>
@@ -488,7 +488,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
                 </p>
                 <listing xml:id="l-aside">
                     <caption>A sample <c>aside</c></caption>
-                    <idx><h>aside</h><h>example code</h></idx>
+                    <idx><h>aside</h><h><pretext/> code</h></idx>
                     <program>
                         <input><xi:include href="aside.ptx" parse="text"/></input>
                     </program>
@@ -512,7 +512,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
                 <p>Longer quotes are best set off using <c>blockquote</c></p>
                 <listing xml:id="l-blockquote">
                     <caption>A sample <c>blockquote</c></caption>
-                    <idx><h>blockquote</h><h>example code</h></idx>
+                    <idx><h>blockquote</h><h><pretext/> code</h></idx>
                     <program>
                         <input><xi:include href="blockquote.ptx" parse="text"/></input>
                     </program>
