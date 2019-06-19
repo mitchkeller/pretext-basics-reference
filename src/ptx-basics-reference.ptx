@@ -411,18 +411,30 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         </chapter>
         <chapter xml:id="ch-table">
             <title>Tables</title>
+            <idx>tables</idx>
             <p>After <c>sidebyside</c>, getting tables to lay out consistently between <init>HTML</init> and <init>PDF</init> is probably the second biggest headache that <pretext /> takes care of for us behind the scenes. Lots of effort has been taken in order to fix some of the challenges inherent to working with the <c>tabular</c> environment in <latex />, and so if you author in <pretext />, you should be able to forget the hacks you had to learn to make nice tables in <latex />.
             </p>
-            <p><alert>Tables should only be used to display data that is inherently tabular.</alert> Too often in other authoring systems, tables are used as a crutch to facilitate the visual layout of a page. Do <em>not</em> do that when authoring <pretext />. A good question to ask yourself before using a <c>tabular</c> is <q>Do the <m>xy</m>-coordinates of a cell have semantic meaning in terms of my data?</q> If the answer is <q>yes</q>, then make a table with <c>tabular</c>. If not, find a more suitable tag. (Perhaps <c>sidebyside</c> and/or <c>sbsgroup</c>.) One of the many reasons for this is that screen readers used by individuals with visual impairments read tables in a very specific way that assumes the <m>xy</m>-coordinates of each cell are contributing to the meaning. Individuals who use screen readers will find a document that uses tables to do something other than present tabular data very confusing and frustrating.</p>
-                <listing xml:id="l-table">
+            <p><idx><h>table</h><h>not for visual layout</h></idx><idx><h>table</h><h>not for visual layout</h><seealso>side-by-side group</seealso></idx><alert>Tables should only be used to display data.</alert> Too often in other authoring systems, tables are used as a crutch to facilitate the visual layout of a page. Do <em>not</em> do that when authoring <pretext />. A good question to ask yourself before using a <c>tabular</c> is <q>Do the <m>xy</m>-coordinates of a cell have semantic meaning in terms of my data?</q> If the answer is <q>yes</q>, then make a table with <c>tabular</c>. If not, find a more suitable tag. (Perhaps <c>sidebyside</c> and/or <c>sbsgroup</c>.) One of the many reasons for this is that screen readers used by individuals with visual impairments read tables in a very specific way that assumes the <m>xy</m>-coordinates of each cell are contributing to the meaning. Individuals who use screen readers will find a document that uses tables to do something other than present tabular data very confusing and frustrating.</p>
+            <listing xml:id="l-table">
                 <caption>Code to produce a table</caption>
+                <idx>tables</idx>
+                <idx><h>tables</h><h><pretext/> code</h></idx>
+                <idx><h><pretext/> code</h><h>tables</h></idx>
+                <idx><h>caption</h><h>of a table</h></idx>
+                <idx><h>tables</h><h>caption</h></idx>
+                <idx>tabular</idx>
+                <idx><h>row</h><h>of a table</h></idx>
+                <idx><h>cell</h><h>of a table</h></idx>
+                <idx><h>entry of a table</h><see>cell</see></idx>
                 <program>
                     <input><xi:include href="table.ptx" parse="text"/></input>
                 </program>
             </listing>
             <p>The code in <xref ref="l-table" /> produces the following output:</p>
             <xi:include href="table.ptx" />
-            <p>See the <pretext /> documentation for more information about how to make more complicated tables.</p>
+            <p>
+                <idx><h>column</h><h>of a table</h></idx>
+            See the <url href="https://pretextbook.org/doc/author-guide/html/topic-tabular.html"><pubtitle><pretext /> Author's Guide</pubtitle></url> for more information about how to make more complicated tables including formatting columns and vertical and horizontal rules.</p>
         </chapter>
         <chapter xml:id="ch-sage">
             <title>SageMath content</title>
