@@ -107,7 +107,7 @@ html: pbr-merge
 	install -d $(HTMLOUT)/knowl
 	cp -a $(IMAGESSRC) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude $(PTXXSL)/mathbook-html.xsl $(WWOUT)/pbr-merge.ptx
+	xsltproc -xinclude -stringparam numbering.theorems.level 1 -stringparam numbering.projects.level 1 -stringparam numbering.equations.level 1 $(PTXXSL)/mathbook-html.xsl $(WWOUT)/pbr-merge.ptx
 
 # Generate PDF output by first producing LaTeX and then compiling with
 # ENGINE.
@@ -121,7 +121,7 @@ pdf: pbr-merge
 	-cp -a $(WWOUT)/*.png $(PDFOUT)/images
 	cp -a $(IMAGESSRC) $(PDFOUT)
 	cd $(PDFOUT); \
-	xsltproc -o ptx-basics-reference.tex -xinclude $(PTXXSL)/mathbook-latex.xsl $(WWOUT)/pbr-merge.ptx; \
+	xsltproc -o ptx-basics-reference.tex -xinclude -stringparam numbering.theorems.level 1 -stringparam numbering.projects.level 1 -stringparam numbering.equations.level 1 $(PTXXSL)/mathbook-latex.xsl $(WWOUT)/pbr-merge.ptx; \
 	$(ENGINE) ptx-basics-reference; \
 	$(ENGINE) ptx-basics-reference
 
