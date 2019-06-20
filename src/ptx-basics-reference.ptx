@@ -343,34 +343,68 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <title>
                 Exercises
             </title>
+            <idx>exercise</idx>
             <section>
                 <title>Inline exercises</title>
-            <p>You can put an <c>exercise</c> in the middle of a division, intermixed between theorems and paragraphs and figures. In this case, it is labeled as a <q>Checkpoint</q>.<fn>See <xref ref="ch-rename" /> for information on how to use something different than <q>Checkpoint</q> as the name for these.</fn> You can also put a bunch of <c>exercise</c>s inside an <c>exercises</c> tag within a division, which is the typical way for creating a bunch of exercises togther at the end of a section.</p>
+                <idx><h>exercise</h><h>inline</h></idx>
+                <idx><h>inline exercise</h></idx>
+
+            <p>
+                You can put an <c>exercise</c> in the middle of a division, intermixed between theorems and paragraphs and figures. In this case, it is labeled as a <q>Checkpoint</q>.<fn>See <xref ref="ch-rename" /> for information on how to use something different than <q>Checkpoint</q> as the name for these.</fn> You can also put a bunch of <c>exercise</c>s inside an <c>exercises</c> tag within a division, which is the typical way for creating a bunch of exercises togther at the end of a section.
+                <idx><h>checkpoint</h><see>inline exercise</see></idx>
+            </p>
+
             <listing xml:id="l-exercise">
                 <caption>An exercise</caption>
+                <idx><h>exercise</h><h><pretext /> code</h></idx>
+                <idx><h>inline exercise</h><h><pretext /> code</h></idx>
+                <idx><h><pretext /> code</h><h>exercise</h><h>inline</h></idx>
                 <program>
                     <input><xi:include href="exercise.ptx" parse="text"/></input>
                 </program>
             </listing>
+
             <p>The code in <xref ref="l-exercise" /> produces the following output:</p>
             <xi:include href="exercise.ptx" />
-            <p>Note that you can have multiple <c>hint</c>, <c>answer</c>, and <c>solution</c> elements. But you must put all the <c>hint</c>s first, then all the <c>answer</c>s, and then all the <c>solution</c>s. There are a variety of options for determining where hints, answers, and solutions appear (at all). Check the <pretext /> documentation for information about <c>stringparam</c>s.
+
+            <p>Note that you can have multiple <c>hint</c>, <c>answer</c>, and <c>solution</c> elements. 
+            <idx><h>hint</h><h>to exercise</h></idx>
+            <idx><h>answer</h><h>to exercise</h></idx>
+            <idx><h>solution</h><h>to exercise</h></idx>
+            <idx><h>exercise</h><h>hint</h></idx>
+            <idx><h>exercise</h><h>answer</h></idx>
+            <idx><h>exercise</h><h>solution</h></idx>
+            But you must put all the <c>hint</c>s first, then all the <c>answer</c>s, and then all the <c>solution</c>s. There are a variety of options for determining where hints, answers, and solutions appear (at all). Check the <pretext /> documentation for information about <c>stringparam</c>s.
             </p>
             </section>
+
             <section xml:id="s-exgp">
                 <title><c>exercisegroup</c></title>
-                <p>Sometimes you have several exercises that should all have a common set of instructions, which is when you will use the <c>exercisegroup</c> tag. An <c>exercisegroup</c> can only be placed inside an <c>exercises</c> element, however! The portion of this section headed as <q><xref ref="ch-sample-exercises" text="global" /> Exercises</q> is produced using the code in <xref ref="l-exercisegroup" />.</p>
+                <idx>exercise group</idx>
+                <p>Sometimes you have several exercises that should all have a common set of instructions, which is when you will use the <c>exercisegroup</c> tag. 
+                <idx><h>exercise group</h><h>instructions</h></idx>
+                An <c>exercisegroup</c> can only be placed inside an <c>exercises</c> element, however! The portion of this section headed as <q><xref ref="ch-sample-exercises" text="global" /> Exercises</q> is produced using the code in <xref ref="l-exercisegroup" />.</p>
+                
                 <listing xml:id="l-exercisegroup">
-                <caption>Using an <c>exercisegroup</c>.</caption>
-                <program>
-                    <input><xi:include href="exercisegroup.ptx" parse="text"/></input>
-                </program>
-            </listing>
+                    <caption>Using an <c>exercisegroup</c>.</caption>
+                    <idx><h>exercise group</h><h><pretext /> code</h></idx>
+                    <idx><h><pretext /> code</h><h>exercise</h><h>group</h></idx>
+                    <program>
+                        <input><xi:include href="exercisegroup.ptx" parse="text"/></input>
+                    </program>
+                </listing>
             <p>
                 If you want the contents of an <c>exercisegroup</c> to be put in multiple columns, you can add a <c>@cols</c> attribute to the <c>exercisegroup</c> of the form <c>cols="3"</c>. The integer value of <c>@cols</c> must be between 2 and 6 (inclusive).
+                <idx><h>exercise group</h><h>columns</h></idx>
+                <idx><h>column</h><h>of an exercise group</h></idx>
+            </p>
+
+            <p>
+                An <c>exercisegroup</c> generates exercises in a separate section or subsection.  The code in <xref ref="l-exercisegroup">Listing</xref> produces the output seen in <xref ref="ch-sample-exercises">Exercises</xref>.
             </p>
             </section>
             <xi:include href="exercisegroup.ptx" />
+
         </chapter>
         <chapter xml:id="ch-rename">
             <title>Renaming elements</title>
