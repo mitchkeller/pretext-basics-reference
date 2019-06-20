@@ -267,13 +267,29 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <p>The code in <xref ref="l-definition" /> produces the following output:</p>
             <xi:include href="definition.ptx" />
         </chapter>
+
         <chapter xml:id="ch-examples">
             <title>Examples</title>
-            <p><pretext /> provides three closely-related tags for things that are examples or similar. They are <c>example</c>, <c>problem</c>, and <c>question</c>. They all have the same syntax. The <c>title</c> element is optional. You may either use a freeform example, as shown in <xref ref="l-example-simple" /><idx><h>example</h><h>unstructured</h></idx>, or an example structured with a <c>statement</c> and zero or more <c>hint</c>s, <c>answer</c>s, and <c>solution</c>s (in that order). This is illustrated in <xref ref="l-example-structured" /><idx><h>example</h><h>structured</h></idx>. Note that for <init>HTML</init> output, if your <c>example</c> has a <c>solution</c>, the solution will be hidden in a knowl, and the publisher does not (as of June 2019) have the option of not knowling the solution.
+            <idx>example</idx>
+            <idx><h>problem</h><see>example</see></idx>
+            <idx><h>question</h><see>example</see></idx>
+            <p>
+                <pretext /> provides three closely-related tags for things that are examples or similar. They are <c>example</c>, <c>problem</c>, and <c>question</c>. They all have the same syntax. The <c>title</c> element is optional. 
+                <idx><h>example</h><h>title</h></idx>
+                <idx><h>title</h><h>of example</h></idx>
+                You may either use a freeform example, as shown in <xref ref="l-example-simple" /><idx><h>example</h><h>unstructured</h></idx>, or an example structured with a <c>statement</c> and zero or more <c>hint</c>s, <c>answer</c>s, and <c>solution</c>s (in that order). 
+                <idx><h>example</h><h>hint</h></idx>
+                <idx><h>example</h><h>answer</h></idx>
+                <idx><h>example</h><h>solution</h></idx>
+                <idx><h>hint</h><h>to example</h></idx>
+                <idx><h>answer</h><h>to example</h></idx>
+                <idx><h>solution</h><h>to example</h></idx>
+                This is illustrated in <xref ref="l-example-structured" /><idx><h>example</h><h>structured</h></idx>. Note that for <init>HTML</init> output, if your <c>example</c> has a <c>solution</c>, the solution will be hidden in a knowl, and the publisher does not (as of June 2019) have the option of not knowling the solution.
             </p>
             <listing xml:id="l-example-simple">
                 <caption>A simple example</caption>
                 <idx><h>example</h><h>unstructured</h><h><pretext/> code</h></idx>
+                <idx><h><pretext/> code</h><h>example</h><h>unstructured</h></idx>
                 <program>
                     <input><xi:include href="example-simple.ptx" parse="text"/></input>
                 </program>
@@ -283,14 +299,15 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <listing xml:id="l-example-structured">
                 <caption>A structured example</caption>
                 <idx><h>example</h><h>structured</h><h><pretext/> code</h></idx>
+                <idx><h><pretext/> code</h><h>example</h><h>structured</h></idx>
                 <program>
                     <input><xi:include href="example-structured.ptx" parse="text"/></input>
                 </program>
             </listing>
             <p>The code in <xref ref="l-example-structured" /> produces the following output:</p>
             <xi:include href="example-structured.ptx" />
-
         </chapter>
+
         <chapter xml:id="ch-remark">
             <title>Remark-like elements</title>
             <p><pretext /> provides several simple tags that fall into the general category of a <q>remark</q> that one would like to be numbered. They are
