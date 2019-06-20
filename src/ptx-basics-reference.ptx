@@ -269,7 +269,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         </chapter>
 
         <chapter xml:id="ch-examples">
-            <title>Examples</title>
+            <title>Typesetting examples</title>
             <idx>example</idx>
             <idx><h>problem</h><see>example</see></idx>
             <idx><h>question</h><see>example</see></idx>
