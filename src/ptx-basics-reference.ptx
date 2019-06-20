@@ -16,7 +16,7 @@ You should have received a copy of the GNU Free Documentation License
 along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
- <pretext xmlns:xi="http://www.w3.org/2001/XInclude"> 
+ <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
      <docinfo>
          <cross-references text="type-global" />
          <latex-image-preamble>
@@ -168,22 +168,44 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         </chapter>
         <chapter xml:id="ch-thm">
             <title>Theorem-like elements</title>
+            <idx>theorem-like elements</idx>
             <p>
-                The tags <c>theorem</c>, <c>algorithm</c>, <c>claim</c>, <c>corollary</c>, <c>fact</c>, <c>identity</c>, <c>lemma</c>, and <c>proposition</c> have the same structure in <pretext />, so we will just illustrate <c>theorem</c> here. 
+                The tags <c>theorem</c>, <c>algorithm</c>, <c>claim</c>, <c>corollary</c>, <c>fact</c>, <c>identity</c>, <c>lemma</c>, and <c>proposition</c> have the same structure in <pretext />, so we will just illustrate <c>theorem</c> here.
+                <idx>theorem</idx>
+                <idx><h>algorithm</h><see>theorem</see></idx>
+                <idx><h>claim</h><see>theorem</see></idx>
+                <idx><h>corollary</h><see>theorem</see></idx>
+                <idx><h>fact</h><see>theorem</see></idx>
+                <idx><h>identity</h><see>theorem</see></idx>
+                <idx><h>lemma</h><see>theorem</see></idx>
+                <idx><h>proposition</h><see>theorem</see></idx>
             </p>
             <listing xml:id="l-theorem">
                 <caption>A theorem</caption>
+                <idx><h>theorem</h><h><pretext/> code</h></idx>
+                <idx><h>proof</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="theorem.ptx" parse="text"/></input>
                 </program>
             </listing>
             <p>The code in <xref ref="l-theorem" /> produces the following output:</p>
             <xi:include href="theorem.ptx" />
-            <p>The <c>title</c> is optional and typically used for theorems with names or to which you wish to give an attribution. Cross references (see <xref ref="s-xref" /> can be made using the name or the number, depending on how the author codes them. </p>
-            <p>You can use <c>definition</c> essentially like <c>theorem</c>, but a <c>definition</c> cannot have a proof. You are encouraged to use the <c>term</c> tag to set off the word being defined. If you wish to include a list of notation to an appendix as your document, you might also add a <c>notation</c> tag such as shown in <xref ref="l-definition" />.</p>
+            <p>
+            The <c>title</c> is optional and typically used for theorems with names or to which you wish to give an attribution.
+            <idx><h>theorem</h><h>title</h></idx>
+            <idx><h>title</h><h>of a theorem-like element</h></idx>
+            Cross references (see <xref ref="s-xref" /> can be made using the name or the number, depending on how the author codes them. </p>
+            <p>You can use <c>definition</c> essentially like <c>theorem</c>, but a <c>definition</c> cannot have a proof.
+            <idx>definition</idx>
+            You are encouraged to use the <c>term</c> tag to set off the word being defined.
+            <idx>term (in a definition)</idx>
+            If you wish to include a list of notation to an appendix as your document, you might also add a <c>notation</c> tag such as shown in <xref ref="l-definition" />.
+            <idx>notation (to be included in a notation list)</idx>
+            </p>
             <listing xml:id="l-definition">
                 <caption>A definition with notation</caption>
                 <idx><h>definition</h><h><pretext/> code</h></idx>
+                <idx><h>notation (to be included in a notation list)</h><h><pretext/> code</h></idx>
                 <program>
                     <input><xi:include href="definition.ptx" parse="text"/></input>
                 </program>
@@ -217,7 +239,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         </chapter>
         <chapter xml:id="ch-remark">
             <title>Remark-like elements</title>
-            <p><pretext /> provides several simple tags that fall into the general category of a <q>remark</q> that one would like to be numbered. They are 
+            <p><pretext /> provides several simple tags that fall into the general category of a <q>remark</q> that one would like to be numbered. They are
 <c>convention</c>, <c>insight</c>, <c>note</c>, <c>observation</c>, <c>remark</c>, and <c>warning</c>. The content of these tags is very simple. They allow an optional title, optional <c>idx</c> tags, and then a mixture of <c>p</c>, <c>blockquote</c>, and <c>pre</c>.
             </p>
             <listing xml:id="l-remark">
@@ -372,7 +394,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             </section>
             <section xml:id="s-latex-fig">
                 <title><latex />-generated images</title>
-                <p><pretext /> makes it straightforward to embed <latex /> code that produces images (such as TikZ) into your source files. <c>xsltproc</c> basically just dumps your code out to your <latex /> file so that it compiles nicely. However, for <init>HTML</init> display, you will need <init>SVG</init> graphic files. This is where the <c>mbx</c> script comes in. Running the <c>mbx</c> script frequently requires patience, particularly on Windows, so settle in with an experienced user before attempting the steps in this subsection. 
+                <p><pretext /> makes it straightforward to embed <latex /> code that produces images (such as TikZ) into your source files. <c>xsltproc</c> basically just dumps your code out to your <latex /> file so that it compiles nicely. However, for <init>HTML</init> display, you will need <init>SVG</init> graphic files. This is where the <c>mbx</c> script comes in. Running the <c>mbx</c> script frequently requires patience, particularly on Windows, so settle in with an experienced user before attempting the steps in this subsection.
                 </p>
                 <aside>
                     <title>The <c>mbx</c> script</title>
