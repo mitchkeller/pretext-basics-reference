@@ -172,31 +172,53 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <xi:include href="md.ptx" />
             <p>Because most of the early adopters of <pretext /> have been mathematicians, there are lots of additional features supported in terms of mathematics. See the online documentation for further details.</p>
         </chapter>
+
         <chapter xml:id="ch-lists">
             <title>Lists</title>
+            <idx>list</idx>
+            <idx><h>enumerate</h><see>list</see></idx>
             <p>
-                Lists are important in lots of contexts, and the desire to nest lists has led to some very, very complex discussions on the <pretext /> email lists. We'll keep it simple here. There are a variety of places that lists can live, but a good mental model is that a list must be put inside a container that's similar to <c>p</c>. So for example, you can't put your list directly inside a <c>subsection</c>, but instead must wrap the list in a <c>p</c>.
+                Lists are important in lots of contexts, and the desire to nest lists has led to some very, very complex discussions on the <pretext /> email lists. We'll keep it simple here. There are a variety of places that lists can live, but a good mental model is that a list must be put inside an environment (or tag) that's similar to <c>p</c>. So for example, you can't put your list directly inside a <c>subsection</c>, but instead must wrap the list in a <c>p</c>.
             </p>
-            <p>There are two common types of lists: ordered and unordered. (There's also the description list. See the documentation for more information on it.) As in <init>HTML</init>, an ordered list is produced with <c>ol</c> and an unordered list with <c>ul</c>. The items of your list are structured inside <c>li</c> tags.
+            <p>There are two common types of lists: ordered and unordered. 
+            <idx><h>list</h><h>ordered</h></idx>
+            <idx><h>ordered list</h></idx> 
+            (There's also the description list. See the documentation for more information on it.) As in <init>HTML</init>, an ordered list is produced with <c>ol</c> and an unordered list with <c>ul</c>. The items of your list are structured inside <c>li</c> tags.
             </p>
             <listing xml:id="l-ol">
                 <caption>An ordered list</caption>
+                <idx><h>list</h><h>ordered</h><h><pretext /> code</h></idx>
+                <idx><h>ordered list</h><h><pretext /> code</h></idx>
+                <idx><h><pretext /> code</h><h>ordered list</h></idx>
                 <program>
                     <input><xi:include href="ol.ptx" parse="text"/></input>
                 </program>
             </listing>
             <p>The code in <xref ref="l-ol" /> produces the following output:</p>
             <xi:include href="ol.ptx" />
-            <p>You can use the <c>@label</c> attribute on the <c>ol</c> tag to change the default labeling. For instance, if the opening tag for the list above were <c>&lt;ol label="A"&gt;</c>, then the list items would be labeled as A. and B. Sensible things to use with <c>@label</c> are i, I, A, a, and 1. Nesting of lists is possible, and there are sensible default labels.</p>
+            <p>You can use the <c>@label</c> attribute on the <c>ol</c> tag to change the default labeling. For instance, if the opening tag for the list above were <c>&lt;ol label="A"&gt;</c>, then the list items would be labeled as A. and B. Sensible things to use with <c>@label</c> are i, I, A, a, and 1. Nesting of lists is possible, and there are sensible default labels.
+            <idx><h>list</h><h>numbering</h></idx> 
+            <idx><h>list</h><h>labeling</h></idx>   
+            <idx><h>numbering</h><h>list items</h></idx>
+            </p>
             <listing xml:id="l-ul">
                 <caption>An unordered list</caption>
+                <idx><h>list</h><h>unordered</h><h><pretext /> code</h></idx>
+                <idx><h>unordered list</h><h><pretext /> code</h></idx>
+                <idx><h><pretext /> code</h><h>unordered list</h></idx>
                 <program>
                     <input><xi:include href="ul.ptx" parse="text"/></input>
                 </program>
             </listing>
-            <p>The code in <xref ref="l-ul" /> produces the following output:</p>
+            <p>The code in <xref ref="l-ul" /> produces the following output:
+            <idx><h>list</h><h>unordered</h></idx>
+            <idx><h>unordered list</h></idx>
+            <idx><h>itemize</h><see>unordered list</see></idx>
+            <idx><h>bulleted list</h><see>unordered list</see></idx>
+            </p>
             <xi:include href="ul.ptx" />
-            <p>You can also use the <c>@cols</c> attribute to split a list (ordered or unordered) across multiple columns if the screen/page is suitably wide. The value of this attribute must be an integer between 2 and 6 (inclusive).</p>
+            <p>You can also use the <c>@cols</c> attribute to split a list (ordered or unordered) across multiple columns if the screen/page is suitably wide. 
+            <idx><h>list</h><h>displayed in columns</h></idx>The value of this attribute must be an integer between 2 and 6 (inclusive).</p>
         </chapter>
         <chapter xml:id="ch-thm">
             <title>Theorem-like elements</title>
