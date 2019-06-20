@@ -92,7 +92,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <idx>division</idx><idx>document structure</idx>
             <idx>section</idx><idx><h>section</h><seealso>division</seealso></idx>
             <idx><h>subsection</h><see>division</see></idx>
-            <idx><h>chapter</h><see>division</see></idx> 
+            <idx><h>chapter</h><see>division</see></idx>
             They are the key organizational elements of the structure of a <pretext /> document and all have (essentially) the same syntax. If a division does not contain any other divisions, then its structure looks like what we see in <xref ref="l-section-primitive" />. (Plenty of other things can go inside other than paragraphs, including figures, <etc />)</p>
 
             <listing xml:id="l-section-primitive">
@@ -124,24 +124,24 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         <chapter xml:id="ch-math">
             <title>Mathematics</title>
             <idx>mathematics</idx>
-            <p>Since <pretext /> was originally called MathBook <init>XML</init>, you will not be surprised to learn that it has robust support for mathematical formulas. 
+            <p>Since <pretext /> was originally called MathBook <init>XML</init>, you will not be surprised to learn that it has robust support for mathematical formulas.
             <idx><h>mathematics</h><h>formula</h></idx>
             <idx><h>mathematics</h><seealso>equation</seealso></idx>
             <idx><h>mathematics</h><h><latex /></h></idx>
             <idx><h>formula</h><see>equation</see></idx>
             <idx><h>equation</h></idx>
-            Inside the tags that delimit math environments, your code is basically <latex /> , with the caveat that you must be careful with &lt; and &amp; since they are special symbols for <init>XML</init>. 
+            Inside the tags that delimit math environments, your code is basically <latex /> , with the caveat that you must be careful with &lt; and &amp; since they are special symbols for <init>XML</init>.
             <idx><latex /></idx>
             <idx><h><latex /></h> <h>exceptions: &lt; and &amp;</h></idx>
             <idx><h>special symbols</h><see><latex /></see></idx>
             When typing math in your <pretext /> code, use <c>\lt</c> for &lt;, use <c>\gt</c> for &gt; (not strictly necessary, but good for symmetry), and use <c>\amp</c> for &amp;. In <init>HTML</init>, MathJax is used to render math, so <pretext /> generally supports the things that MathJax does <q>out of the box</q> without the need for too many additional packages to be loaded.
             <idx>MathJax</idx>
             </p>
-            
-            <p> For inline math, just wrap things in the <c>m</c> tag. 
+
+            <p> For inline math, just wrap things in the <c>m</c> tag.
             <idx><h>equation</h><h>in-line</h><h><pretext /> code</h></idx>
             <idx><h><pretext /> code</h><h>in-line equation</h></idx>
-            For example, <m>a^2 + b^2 = c^2</m> is produced by <c>&lt;m&gt;a^2 + b^2 = c^2&lt;/m&gt;.</c> We get displayed equations via the <c>me</c> and <c>men</c> tags; the latter produces a numbered equation. 
+            For example, <m>a^2 + b^2 = c^2</m> is produced by <c>&lt;m&gt;a^2 + b^2 = c^2&lt;/m&gt;.</c> We get displayed equations via the <c>me</c> and <c>men</c> tags; the latter produces a numbered equation.
             <idx><h>mathematics</h><h>environments</h><h>displayed equation</h></idx>
             <idx><h>mathematics</h><h>environments</h><h>in-line equation</h></idx>
             </p>
@@ -153,7 +153,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
                     <input><xi:include href="me.ptx" parse="text"/></input>
                 </program>
             </listing>
-            
+
             <p>The code in <xref ref="l-me" /> produces the following output:</p>
             <xi:include href="me.ptx" />
             <p>For a collection of equations all aligned at a designated point, use <c>md</c> and <c>mrow</c>. (There's also <c>mdn</c> for numbered equations.)
@@ -167,7 +167,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
                     <input><xi:include href="md.ptx" parse="text"/></input>
                 </program>
             </listing>
-            
+
             <p>The code in <xref ref="l-md" /> produces the following output:</p>
             <xi:include href="md.ptx" />
             <p>Because most of the early adopters of <pretext /> have been mathematicians, there are lots of additional features supported in terms of mathematics. See the online documentation for further details.</p>
@@ -180,9 +180,9 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 Lists are important in lots of contexts, and the desire to nest lists has led to some very, very complex discussions on the <pretext /> email lists. We'll keep it simple here. There are a variety of places that lists can live, but a good mental model is that a list must be put inside an environment (or tag) that's similar to <c>p</c>. So for example, you can't put your list directly inside a <c>subsection</c>, but instead must wrap the list in a <c>p</c>.
             </p>
-            <p>There are two common types of lists: ordered and unordered. 
+            <p>There are two common types of lists: ordered and unordered.
             <idx><h>list</h><h>ordered</h></idx>
-            <idx><h>ordered list</h></idx> 
+            <idx><h>ordered list</h></idx>
             (There's also the description list. See the documentation for more information on it.) As in <init>HTML</init>, an ordered list is produced with <c>ol</c> and an unordered list with <c>ul</c>. The items of your list are structured inside <c>li</c> tags.
             </p>
             <listing xml:id="l-ol">
@@ -197,8 +197,8 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <p>The code in <xref ref="l-ol" /> produces the following output:</p>
             <xi:include href="ol.ptx" />
             <p>You can use the <c>@label</c> attribute on the <c>ol</c> tag to change the default labeling. For instance, if the opening tag for the list above were <c>&lt;ol label="A"&gt;</c>, then the list items would be labeled as A. and B. Sensible things to use with <c>@label</c> are i, I, A, a, and 1. Nesting of lists is possible, and there are sensible default labels.
-            <idx><h>list</h><h>numbering</h></idx> 
-            <idx><h>list</h><h>labeling</h></idx>   
+            <idx><h>list</h><h>numbering</h></idx>
+            <idx><h>list</h><h>labeling</h></idx>
             <idx><h>numbering</h><h>list items</h></idx>
             </p>
             <listing xml:id="l-ul">
@@ -217,7 +217,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <idx><h>bulleted list</h><see>unordered list</see></idx>
             </p>
             <xi:include href="ul.ptx" />
-            <p>You can also use the <c>@cols</c> attribute to split a list (ordered or unordered) across multiple columns if the screen/page is suitably wide. 
+            <p>You can also use the <c>@cols</c> attribute to split a list (ordered or unordered) across multiple columns if the screen/page is suitably wide.
             <idx><h>list</h><h>displayed in columns</h></idx>The value of this attribute must be an integer between 2 and 6 (inclusive).</p>
         </chapter>
         <chapter xml:id="ch-thm">
@@ -269,15 +269,15 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         </chapter>
 
         <chapter xml:id="ch-examples">
-            <title>Examples</title>
+            <title>Typesetting examples</title>
             <idx>example</idx>
             <idx><h>problem</h><see>example</see></idx>
             <idx><h>question</h><see>example</see></idx>
             <p>
-                <pretext /> provides three closely-related tags for things that are examples or similar. They are <c>example</c>, <c>problem</c>, and <c>question</c>. They all have the same syntax. The <c>title</c> element is optional. 
+                <pretext /> provides three closely-related tags for things that are examples or similar. They are <c>example</c>, <c>problem</c>, and <c>question</c>. They all have the same syntax. The <c>title</c> element is optional.
                 <idx><h>example</h><h>title</h></idx>
                 <idx><h>title</h><h>of example</h></idx>
-                You may either use a freeform example, as shown in <xref ref="l-example-simple" /><idx><h>example</h><h>unstructured</h></idx>, or an example structured with a <c>statement</c> and zero or more <c>hint</c>s, <c>answer</c>s, and <c>solution</c>s (in that order). 
+                You may either use a freeform example, as shown in <xref ref="l-example-simple" /><idx><h>example</h><h>unstructured</h></idx>, or an example structured with a <c>statement</c> and zero or more <c>hint</c>s, <c>answer</c>s, and <c>solution</c>s (in that order).
                 <idx><h>example</h><h>hint</h></idx>
                 <idx><h>example</h><h>answer</h></idx>
                 <idx><h>example</h><h>solution</h></idx>
@@ -367,7 +367,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <p>The code in <xref ref="l-exercise" /> produces the following output:</p>
             <xi:include href="exercise.ptx" />
 
-            <p>Note that you can have multiple <c>hint</c>, <c>answer</c>, and <c>solution</c> elements. 
+            <p>Note that you can have multiple <c>hint</c>, <c>answer</c>, and <c>solution</c> elements.
             <idx><h>hint</h><h>to exercise</h></idx>
             <idx><h>answer</h><h>to exercise</h></idx>
             <idx><h>solution</h><h>to exercise</h></idx>
@@ -381,10 +381,10 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
             <section xml:id="s-exgp">
                 <title><c>exercisegroup</c></title>
                 <idx>exercise group</idx>
-                <p>Sometimes you have several exercises that should all have a common set of instructions, which is when you will use the <c>exercisegroup</c> tag. 
+                <p>Sometimes you have several exercises that should all have a common set of instructions, which is when you will use the <c>exercisegroup</c> tag.
                 <idx><h>exercise group</h><h>instructions</h></idx>
                 An <c>exercisegroup</c> can only be placed inside an <c>exercises</c> element, however! The portion of this section headed as <q><xref ref="ch-sample-exercises" text="global" /> Exercises</q> is produced using the code in <xref ref="l-exercisegroup" />.</p>
-                
+
                 <listing xml:id="l-exercisegroup">
                     <caption>Using an <c>exercisegroup</c>.</caption>
                     <idx><h>exercise group</h><h><pretext /> code</h></idx>
