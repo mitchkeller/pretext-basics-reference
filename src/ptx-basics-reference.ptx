@@ -45,8 +45,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
           published by the Free Software Foundation; with no
           Invariant Sections, no Front-Cover Texts, and no Back-Cover
           Texts.  A copy of the license is included in the section entitled
-          <q>GNU Free Documentation License</q>
-          .
+          <q>GNU Free Documentation License</q>.
         </shortlicense>
 
       </copyright>
@@ -1161,8 +1160,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
       <p>
         The topics in this section are not terribly structural or critical,
         but they fall in the category of
-        <q>little things you want to do right from the outset</q>
-        .
+        <q>little things you want to do right from the outset</q>.
       </p>
     </introduction>
 
@@ -1205,8 +1203,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
 
       <p>
         Extensive details are provided in the
-        <url href="https://pretextbook.org/doc/author-guide/html/topic-url.html"><pubtitle><pretext /> Author's Guide</pubtitle></url>
-        .
+        <url href="https://pretextbook.org/doc/author-guide/html/topic-url.html"><pubtitle><pretext /> Author's Guide</pubtitle></url>.
       </p>
     </section>
 
@@ -1281,8 +1278,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
         we use <c>            &lt;idx&gt;&lt;h&gt;font&lt;/h&gt;&lt;see&gt;formatting&lt;/see&gt;&lt;/idx&gt;</c> to create an index entry for
         <q>font</q>
         that instructs the reader to
-        <q><em>see </em> formatting</q>
-        .
+        <q><em>see </em> formatting</q>.
       </p>
 
       <p>
