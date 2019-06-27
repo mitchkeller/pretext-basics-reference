@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 <docinfo>
   <cross-references text="type-global" />
@@ -8,7 +7,6 @@
 </latex-image-preamble>
   <rename element="algorithm">Porism</rename>
 </docinfo>
-
 <article xml:id="basics-ref">
   <title><pretext /> Basics Reference</title>
   <frontmatter>
@@ -19,7 +17,6 @@
       </author>
       <date>June 2019</date>
     </titlepage>
-
     <abstract>
       <p>
         This document provides a quick overview of the minimal syntax for a variety of key <pretext /> features.
@@ -31,7 +28,6 @@
       </p>
     </abstract>
   </frontmatter>
-
   <section xml:id="s-about">
     <title>About this reference</title>
     <p>
@@ -50,10 +46,8 @@
       <pubtitle><pretext /> Author's Guide</pubtitle>
       ).
     </p>
-
     <p>
       There are some things that are considered beyond the scope of this reference:
-
       <ul>
         <li>
           Many of the possible options that can be used with the different tags.
@@ -63,11 +57,9 @@
           follow the link to the appropriate portion of the
           <pubtitle><pretext /> Author's Guide</pubtitle>.
         </li>
-
         <li>
           Instructions on using <c>xsltproc</c> to convert your <pretext /> <init>XML</init> to another format such as <init>HTML</init> or <latex />.
         </li>
-
         <li>
           Instructions on using WeBWorK in <pretext />.
           (This reference does show the most basic of syntax for including a problem from the WeBWorK Open Problem Library.
@@ -77,13 +69,12 @@
       </ul>
     </p>
   </section>
-
   <section xml:id="s-basic-formatting">
     <title>Basic formatting</title>
     <p>
           <idx><h>bold</h><see>formatting</see></idx>
           <idx><h>italic</h><see>formatting</see></idx>
-          <idx><h>font</h><see>formatting</see></idx> 
+          <idx><h>font</h><see>formatting</see></idx>
           <idx>term</idx>
           <idx>formatting</idx>
           <idx>emphasis</idx>
@@ -106,27 +97,21 @@
       There are ways to mark up such structural ideas in <pretext />,
       and authors should conscientiously ensure that they use this markup.
     </p>
-
     <p>
       To illustrate some of the key structural markup that leads to formatting,
       we include the listing and paragraph below.
     </p>
-
     <listing xml:id="l-p">
       <caption>Some basic content of a paragraph</caption>
-
 <program>
 <input><xi:include href="p.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-p" /> produces the following output:
     </p>
-
     <xi:include href="p.ptx" />
   </section>
-
   <section xml:id="s-divisions">
     <title>Document Structure</title>
     <p>
@@ -143,13 +128,11 @@
       then its structure looks like what we see in <xref ref="l-section-primitive" />. (Plenty of other things can go inside other than paragraphs,
       including figures, <etc />)
     </p>
-
     <listing xml:id="l-section-primitive">
       <caption>The general outline of a section as a model division</caption>
       <idx><h>section</h><h>example code</h></idx>
 <program><input><xi:include href="section.ptx" parse="text"/></input> </program>
     </listing>
-
     <p>
       If a division has other divisions inside it,
       then the structure is a bit more complicated and regimented.
@@ -166,17 +149,13 @@
       or <c>conclusion</c>.
       This is illustrated in <xref ref="l-section-sub" />.
     </p>
-
     <listing xml:id="l-section-sub">
       <caption>A <c>section</c> with <c>subsection</c>s.</caption>
-
 <program><input><xi:include href="section-sub.ptx" parse="text"/></input> </program>
     </listing>
-
     <paragraphs>
       <title>Limitations on introductions</title>
       <idx><h>introduction</h><h>of chapter, section, etc.</h><h>limitations</h></idx>
-
       <p>
         There are a lot of tags that are <em>not</em>
         allowed in introductions.
@@ -186,12 +165,10 @@
         Once the schema is correct, this text should be updated.
       </p>
     </paragraphs>
-
     <paragraphs>
       <title>The role of <c>p</c> tags</title>
       <idx>paragraph</idx>
       <idx><c>p</c> tag</idx>
-
       <p>
         One of the things you'll need to keep an eye out for is when things must be wrapped in <c>p</c> (paragraph) tags.
         Notice that <c>title</c> tags do not have their content wrapped in <c>p</c>,
@@ -202,7 +179,6 @@
       </p>
     </paragraphs>
   </section>
-
   <section xml:id="s-math">
     <title>Mathematics</title>
     <p>
@@ -220,7 +196,6 @@
       <q>out of the box</q>
       without the need for too many additional packages to be loaded.
     </p>
-
     <p>
       For inline math,
       just wrap things in the <c>m</c> tag.
@@ -228,47 +203,36 @@
       <m>a^2 + b^2 = c^2</m> is produced by <c>&lt;m&gt;a^2 + b^2 = c^2&lt;/m&gt;.</c> We get displayed equations via the <c>me</c> and <c>men</c> tags;
       the latter produces a numbered equation.
     </p>
-
     <listing xml:id="l-me">
       <caption>Displayed equations</caption>
-
 <program>
 <input><xi:include href="me.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-me" /> produces the following output:
     </p>
-
     <xi:include href="me.ptx" />
-
     <p>
       For a collection of equations all aligned at a designated point,
       use <c>md</c> and <c>mrow</c>. (There's also <c>mdn</c> for numbered equations.)
     </p>
-
     <listing xml:id="l-md">
       <caption>Displayed equations</caption>
-
 <program>
 <input><xi:include href="md.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-md" /> produces the following output:
     </p>
-
     <xi:include href="md.ptx" />
-
     <p>
       Because most of the early adopters of <pretext /> have been mathematicians,
       there are lots of additional features supported in terms of mathematics.
       See the online documentation for further details.
     </p>
   </section>
-
   <section xml:id="s-lists">
     <title>Lists</title>
     <p>
@@ -282,7 +246,6 @@
       you can't put your list directly inside a <c>subsection</c>,
       but instead must wrap the list in a <c>p</c>.
     </p>
-
     <p>
       There are two common types of lists:
       ordered and unordered.
@@ -292,21 +255,16 @@
       an ordered list is produced with <c>ol</c> and an unordered list with <c>ul</c>.
       The items of your list are structured inside <c>li</c> tags.
     </p>
-
     <listing xml:id="l-ol">
       <caption>An ordered list</caption>
-
 <program>
 <input><xi:include href="ol.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-ol" /> produces the following output:
     </p>
-
     <xi:include href="ol.ptx" />
-
     <p>
       You can use the <c>@label</c> attribute on the <c>ol</c> tag to change the default labeling.
       For instance,
@@ -315,21 +273,16 @@
       Nesting of lists is possible,
       and there are sensible default labels.
     </p>
-
     <listing xml:id="l-ul">
       <caption>An unordered list</caption>
-
 <program>
 <input><xi:include href="ul.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-ul" /> produces the following output:
     </p>
-
     <xi:include href="ul.ptx" />
-
     <p>
       You can also use the <c>@cols</c> attribute to split a list
       (ordered or unordered)
@@ -338,7 +291,6 @@
       (inclusive).
     </p>
   </section>
-
   <section xml:id="s-thm">
     <title>Theorem-like elements</title>
     <p>
@@ -346,27 +298,21 @@
       and <c>proposition</c> have the same structure in <pretext />,
       so we will just illustrate <c>theorem</c> here.
     </p>
-
     <listing xml:id="l-theorem">
       <caption>A theorem</caption>
-
 <program>
 <input><xi:include href="theorem.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-theorem" /> produces the following output:
     </p>
-
     <xi:include href="theorem.ptx" />
-
     <p>
       The <c>title</c> is optional and typically used for theorems with names or to which you wish to give an attribution.
       Cross references (see <xref ref="ss-xref" /> can be made using the name or the number,
       depending on how the author codes them.
     </p>
-
     <p>
       You can use <c>definition</c> essentially like <c>theorem</c>,
       but a <c>definition</c> cannot have a proof.
@@ -374,7 +320,6 @@
       If you wish to include a list of notation to an appendix as your document,
       you might also add a <c>notation</c> tag such as shown in <xref ref="l-definition" text="type-global" />.
     </p>
-
     <listing xml:id="l-definition">
       <caption>A definition with notation</caption>
       <idx><h>definition</h><h>example code</h></idx>
@@ -382,14 +327,11 @@
 <input><xi:include href="definition.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-definition" /> produces the following output:
     </p>
-
     <xi:include href="definition.ptx" />
   </section>
-
   <section xml:id="s-examples">
     <title>Examples</title>
     <p>
@@ -412,7 +354,6 @@
       (as of June 2019)
       have the option of not knowling the solution.
     </p>
-
     <listing xml:id="l-example-simple">
       <caption>A simple example</caption>
       <idx><h>example</h><h>unstructured</h><h>example code</h></idx>
@@ -420,13 +361,10 @@
 <input><xi:include href="example-simple.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-example-simple" /> produces the following output:
     </p>
-
     <xi:include href="example-simple.ptx" />
-
     <listing xml:id="l-example-structured">
       <caption>A structured example</caption>
       <idx><h>example</h><h>structured</h><h>example code</h></idx>
@@ -434,14 +372,11 @@
 <input><xi:include href="example-structured.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-example-structured" /> produces the following output:
     </p>
-
     <xi:include href="example-structured.ptx" />
   </section>
-
   <section xml:id="s-remark">
     <title>Remark-like elements</title>
     <p>
@@ -456,7 +391,6 @@
       and then a mixture of <c>p</c>, <c>blockquote</c>,
       and <c>pre</c>.
     </p>
-
     <listing xml:id="l-remark">
       <caption>A remark</caption>
       <idx><h>remark</h><h>example code</h></idx>
@@ -464,14 +398,11 @@
 <input><xi:include href="remark.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-remark" /> produces the following output:
     </p>
-
     <xi:include href="remark.ptx" />
   </section>
-
   <section xml:id="s-project">
     <title>Project-like elements</title>
     <p>
@@ -483,7 +414,6 @@
       a structure analogous to that of the structured <c>example</c> in <xref ref="l-example-structured" text="type-global" />;
       and the highly-stuctured <c>introduction</c>, <c>task</c>, <c>conclusion</c> model shown in <xref ref="l-project" text="type-global" />.
     </p>
-
     <listing xml:id="l-project">
       <caption>A project</caption>
       <idx><h>project</h><h>example code</h></idx>
@@ -491,14 +421,11 @@
 <input><xi:include href="project.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-project" /> produces the following output:
     </p>
-
     <xi:include href="project.ptx" />
   </section>
-
   <section xml:id="s-exercise">
     <title>Exercises</title>
     <subsection>
@@ -515,21 +442,16 @@
         </fn> You can also put a bunch of <c>exercise</c>s inside an <c>exercises</c> tag within a division,
         which is the typical way for creating a bunch of exercises togther at the end of a section.
       </p>
-
       <listing xml:id="l-exercise">
         <caption>An exercise</caption>
-
 <program>
 <input><xi:include href="exercise.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-exercise" /> produces the following output:
       </p>
-
       <xi:include href="exercise.ptx" />
-
       <p>
         Note that you can have multiple <c>hint</c>, <c>answer</c>,
         and <c>solution</c> elements.
@@ -541,7 +463,6 @@
         Check the <pretext /> documentation for information about <c>stringparam</c>s.
       </p>
     </subsection>
-
     <subsection xml:id="ss-exgp">
       <title><c>exercisegroup</c></title>
       <p>
@@ -552,15 +473,12 @@
         <q><xref ref="s-sample-exercises" text="global" /> Exercises</q>
         is produced using the code in <xref ref="l-exercisegroup" />.
       </p>
-
       <listing xml:id="l-exercisegroup">
         <caption>Using an <c>exercisegroup</c>.</caption>
-
 <program>
 <input><xi:include href="exercisegroup.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         If you want the contents of an <c>exercisegroup</c> to be put in multiple columns,
         you can add a <c>@cols</c> attribute to the <c>exercisegroup</c> of the form <c>cols="3"</c>.
@@ -568,10 +486,8 @@
         (inclusive).
       </p>
     </subsection>
-
     <xi:include href="exercisegroup.ptx" />
   </section>
-
   <section xml:id="s-rename">
     <title>Renaming elements</title>
     <p>
@@ -586,28 +502,22 @@
       The <c>rename</c> tag generates a <em>global</em> change;
       it is not possible to rename a single instance of a tag or to define your own tags (without writings your own <init>XSLT</init> code.
     </p>
-
     <p>
       We have included this <c>rename</c> code in this project's <c>docinfo</c>,
       and as such,
       we can do the following.
     </p>
-
     <listing xml:id="l-porism">
       <caption>A porism generated using <c>algorithm</c> and <c>rename</c></caption>
-
 <program>
 <input><xi:include href="porism.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-porism" /> produces the following output:
     </p>
-
     <xi:include href="porism.ptx" />
   </section>
-
   <section xml:id="s-webwork">
     <title><webwork /> exercises</title>
     <p>
@@ -630,50 +540,39 @@
       <webwork /> exercises,
       compiling to produce any output format becomes a multistep process.
     </p>
-
     <p>
       When a
       <webwork /> exercise lives on the server, the code takes one form.
     </p>
-
     <listing xml:id="l-webwork-opl">
       <caption>A
       <webwork /> exercise living on the server</caption>
-
 <program>
 <input><xi:include href="webwork-opl.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-webwork-opl" /> produces the following output:
     </p>
-
     <xi:include href="webwork-opl.ptx" />
-
     <p>
       It is also possible to code
       <webwork /> exercises directly in your <pretext /> source.
       This shows the most primitive sort of such exercise.
       The author guide goes into greater detail.
     </p>
-
     <listing xml:id="l-webwork-code">
       <caption>A simple
       <webwork /> exercise coded in <pretext /> source</caption>
-
 <program>
 <input><xi:include href="webwork-code.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-webwork-code" /> produces the following output:
     </p>
-
     <xi:include href="webwork-code.ptx" />
   </section>
-
   <section xml:id="s-fig">
     <title>Figures and friends</title>
     <subsection xml:id="ss-fig">
@@ -694,21 +593,16 @@
         <init>PNG</init> is also supported by modern web browsers and <latex />,
         so that's a good option when vector graphic formats like <init>SVG</init> and <init>PDF</init> are not available or appropriate.
       </p>
-
       <listing xml:id="l-figure">
         <caption>Code to include a figure</caption>
-
 <program>
 <input><xi:include href="figure.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-figure" /> produces the following output:
       </p>
-
       <xi:include href="figure.ptx" />
-
       <p>
         Note that the path to the image file does not include the file extension.
         When you run <c>xsltproc</c>,
@@ -720,7 +614,6 @@
         put the extension in the filename so that the file is used in both <init>HTML</init> and <latex />.
       </p>
     </subsection>
-
     <subsection xml:id="ss-sidebyside">
       <title><c>sidebyside</c></title>
       <p>
@@ -732,7 +625,6 @@
         Fortunately,
         <pretext /> does the heavy lifting for us here for both <latex /> and <init>HTML</init>.
       </p>
-
       <p>
         We include two examples here.
         The first places the <c>sidebyside</c> directly in the current division and places a <c>figure</c> with a caption inside the <c>sidebyside</c>.
@@ -740,60 +632,45 @@
         It's possible to do all sorts of nesting and get nice subnumbering automatically.
         The sample article demonstrates all the capabilities of <c>sidebyside</c>.
       </p>
-
       <listing xml:id="l-sbs">
         <caption>Code to place things side by side</caption>
-
 <program>
 <input><xi:include href="sidebyside.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-sbs" /> produces the following output:
       </p>
-
       <xi:include href="sidebyside.ptx" />
-
       <listing xml:id="l-sbs2">
         <caption>A few more bells and whistles for <c>sidebyside</c></caption>
-
 <program>
 <input><xi:include href="sidebyside2.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-sbs2" /> produces the following output:
       </p>
-
       <xi:include href="sidebyside2.ptx" />
-
       <p>
         Another use for <c>sidebyside</c> occurs when you want to center a graphc or tabular environment
         (or a number of other things)
         on a line by itself but without a <c>caption</c> and number.
       </p>
-
       <p>
         It is also possible to create a group of <c>sidebyside</c> tags with common <c>@widths</c> by using the <c>sbsgroup</c> tag.
       </p>
-
       <listing xml:id="l-sbsgroup">
         <caption>Use of <c>sbsgroup</c></caption>
-
 <program>
 <input><xi:include href="sbsgroup.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-sbsgroup" /> produces the following output:
       </p>
-
       <xi:include href="sbsgroup.ptx" />
     </subsection>
-
     <subsection xml:id="ss-latex-fig">
       <title><latex />-generated images</title>
       <p>
@@ -821,7 +698,6 @@
           It is definitely possible to have a fully functional configuration for the <c>mbx</c> script on Windows,
           and the <pretext /> support email list will provide plenty of assistance when you get stuck.
         </p>
-
         <p>
           In addition to <c>python</c>,
           you will need a working <latex /> installation
@@ -842,32 +718,25 @@
         but lots of other <latex /> graphics packages can be used.
         One step required is to put
       </p>
-
 <pre>
 &lt;latex-image-preamble&gt;
 \usepackage{tikz}
 &lt;/latex-image-preamble&gt;
 </pre>
-
       <p>
         in the <c>docinfo</c> tag of your main file. <c>latex-image-preamble</c> is used to set up the preamble that should be used for making <init>SVG</init> images from your <pretext /> source.
         Macros that you wish to use more broadly should be put inside <c>macros</c> inside <c>docinfo</c>.
       </p>
-
       <listing xml:id="l-tikz">
         <caption>How to use <c>latex-image</c> to invoke TikZ</caption>
-
 <program>
 <input><xi:include href="tikz.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-tikz" /> produces the following output:
       </p>
-
       <xi:include href="tikz.ptx" />
-
       <p>
         Well, that's not 100% true for <init>HTML</init>.
         If you just run <c>xsltproc</c>,
@@ -880,19 +749,15 @@
         </fn> To do this, on the command line we run the following command
         (on a single line).
       </p>
-
       <sidebyside widths="80%" margins="10% 10%">
-
 <pre>[path to mathbook]/script/mbx -c latex-image -f svg
 -d ./images [path to PTX source file]</pre>
       </sidebyside>
-
       <p>
         This command assumes that we're in the directory where we usually run <c>xsltproc</c> to produce our <init>HTML</init> and that we want to put the images in a directory called <c>images</c> inside that directory.
       </p>
     </subsection>
   </section>
-
   <section xml:id="s-table">
     <title>Tables</title>
     <p>
@@ -901,7 +766,6 @@
       Lots of effort has been taken in order to fix some of the challenges inherent to working with the <c>tabular</c> environment in <latex />, and so if you author in <pretext />,
       you should be able to forget the hacks you had to learn to make nice tables in <latex />.
     </p>
-
     <p>
       <alert>Tables should only be used to display data that is inherently tabular.</alert>
       Too often in other authoring systems,
@@ -917,26 +781,20 @@
       One of the many reasons for this is that screen readers used by individuals with visual impairments read tables in a very specific way that assumes the <m>xy</m>-coordinates of each cell are contributing to the meaning.
       Individuals who use screen readers will find a document that uses tables to do something other than present tabular data very confusing and frustrating.
     </p>
-
     <listing xml:id="l-table">
       <caption>Code to produce a table</caption>
-
 <program>
 <input><xi:include href="table.ptx" parse="text"/></input>
 </program>
     </listing>
-
     <p>
       The code in <xref ref="l-table" /> produces the following output:
     </p>
-
     <xi:include href="table.ptx" />
-
     <p>
       See the <pretext /> documentation for more information about how to make more complicated tables.
     </p>
   </section>
-
   <section xml:id="s-sage">
     <title>SageMath content</title>
     <subsection xml:id="ss-sage-cell">
@@ -946,26 +804,20 @@
         and <c>output</c>.
         The last tag is useful for producing a <init>PDF</init> that includes the result of the code's execution.
       </p>
-
       <listing xml:id="l-sage">
         <caption>SageMath cell</caption>
-
 <program>
 <input><xi:include href="sage.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-sage" /> produces the following output:
       </p>
-
       <xi:include href="sage.ptx" />
-
       <p>
         SageMathCells on a single <init>HTML</init> page are automatically linked so that a cell can use the results of computations done in earlier cells on the same page.
       </p>
     </subsection>
-
     <subsection xml:id="ss-sageplot">
       <title><c>sageplot</c></title>
       <p>
@@ -977,15 +829,12 @@
         (In particular,
         see the aside in that subsection about the additional packages that must be installed and configured to use the <c>mbx</c> script.)
       </p>
-
       <listing xml:id="l-sageplot">
         <caption><c>sageplot</c> to produce a graphic</caption>
-
 <program>
 <input><xi:include href="sageplot.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         We need to run the <c>mbx</c> script to actually make the image files required.
         If you want to make both <init>HTML</init> and <init>PDF</init> via <latex />, you'll need to run it twice.
@@ -996,27 +845,20 @@
         but that is more likely to raise errors because some source code cannot produce certain output formats.
         It's best to stay away from error-producing steps until you're comfortable with debugging your system.
       </p>
-
       <sidebyside widths="80%" margins="10% 10%">
-
 <pre>[path to mathbook]/script/mbx -c sageplot -f svg
 -d ./images [path to PTX source file]</pre>
       </sidebyside>
-
       <sidebyside widths="80%" margins="10% 10%">
-
 <pre>[path to mathbook]/script/mbx -c sageplot -f pdf
 -d ./images [path to PTX source file]</pre>
       </sidebyside>
-
       <p>
         The code in <xref ref="l-sageplot" /> produces the following output.
       </p>
-
       <xi:include href="sageplot.ptx" />
     </subsection>
   </section>
-
   <section xml:id="s-small">
     <title>Small, but useful</title>
     <introduction>
@@ -1026,7 +868,6 @@
         <q>little things you want to do right from the outset</q>.
       </p>
     </introduction>
-
     <subsection xml:id="ss-xref">
       <title>Cross references</title>
       <p>
@@ -1035,21 +876,17 @@
         the equivalent of <c>\label</c> is to use an <c>xml:id</c>.
         For example, the opening tag for this subsection is
       </p>
-
       <sidebyside>
         <pre>&lt;subsection xml:id="ss-xref"&gt;</pre>
       </sidebyside>
-
       <p>
         Instead of the <c>\ref</c> used by <latex />,
         we use <c>xref</c> in <pretext />.
         So we can type
       </p>
-
       <sidebyside>
         <pre>&lt;xref ref="ss-xref" /&gt;</pre>
       </sidebyside>
-
       <p>
         to create a reference to this subsection:
         <xref ref="ss-xref" />.
@@ -1069,7 +906,6 @@
         which you can do for your entire document as well as for individual cross references that require different treatment.
       </p>
     </subsection>
-
     <subsection>
       <title>External links</title>
       <p>
@@ -1077,19 +913,16 @@
         you will want the <c>url</c> tag.
         The code <c>&lt;url href="https://pretextbook.org" /&gt;</c> produces <url href="https://pretextbook.org" />.
       </p>
-
       <p>
         Extensive details are provided in the
         <url href="https://pretextbook.org/doc/author-guide/html/topic-url.html">
         <pubtitle><pretext /> Author's Guide</pubtitle></url>.
       </p>
     </subsection>
-
     <subsection xml:id="ss-fn">
       <title>Footnotes and asides</title>
       <idx>footnote</idx>
       <idx><c>fn</c> tag</idx>
-
       <p>
         Footnotes are not too hard,
         just use <c>fn</c>,
@@ -1103,7 +936,6 @@
         but there's a lot of care being taken because of the prospect of footnotes inside footnotes inside footnotes.
             <idx><h>footnote</h><h>restrictions</h></idx>
       </p>
-
       <p>
         Because of the restrictions on footnotes,
         it is important to keep them short.
@@ -1115,7 +947,6 @@
         Each of these allows an optional title and then a variety of tags such as <c>p</c>, <c>figure</c>,
         and <c>sidebyside</c> (and many more).
       </p>
-
       <listing xml:id="l-aside">
         <caption>A sample <c>aside</c></caption>
         <idx><h>aside</h><h>example code</h></idx>
@@ -1123,16 +954,13 @@
 <input><xi:include href="aside.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-aside" text="type-global" /> produces the aside
         <q>A Sample Aside</q>
         . A less contrived example of an aside can be found in <xref ref="ss-latex-fig" text="type-global" />.
       </p>
-
       <xi:include href="aside.ptx" />
     </subsection>
-
     <subsection xml:id="ss-idx">
       <title>Index entries</title>
       <p>
@@ -1159,17 +987,14 @@
         that instructs the reader to
         <q><em>see </em> formatting</q>.
       </p>
-
       <p>
         If you generate <latex /> output,
         the index is generated without any additional passes beyond the usual two required to get references correct.
       </p>
     </subsection>
-
     <subsection>
       <title>Quotations</title>
       <idx>quotations</idx>
-
       <p>
         To ensure that quotation marks are poperly typeset,
         it is important to use the correct <pretext /> code.
@@ -1186,11 +1011,9 @@
             <idx><h>quote</h><h>single</h></idx>
             <idx><h>quote</h><h>double</h></idx>
       </p>
-
       <p>
         Longer quotes are best set off using <c>blockquote</c>
       </p>
-
       <listing xml:id="l-blockquote">
         <caption>A sample <c>blockquote</c></caption>
         <idx><h>blockquote</h><h>example code</h></idx>
@@ -1198,15 +1021,12 @@
 <input><xi:include href="blockquote.ptx" parse="text"/></input>
 </program>
       </listing>
-
       <p>
         The code in <xref ref="l-blockquote" text="type-global" /> produces the quotation below.
       </p>
-
       <xi:include href="blockquote.ptx" />
     </subsection>
   </section>
-
   <section>
     <title>Modular source</title>
     <p>
@@ -1218,17 +1038,14 @@
       , so we refer you there for more details.
     </p>
   </section>
-
   <backmatter>
     <appendix>
       <title>List of Notation</title>
       <notation-list />
     </appendix>
-
     <index>
       <index-list/>
     </index>
-
   </backmatter>
 </article>
 </pretext>

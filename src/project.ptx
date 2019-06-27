@@ -5,7 +5,6 @@
       Here is where we describe what the reader will accomplish in the project.
     </p>
   </introduction>
-
   <task>
     <statement>
       <p>
@@ -28,7 +27,6 @@
       </p>
     </solution>
   </task>
-
   <task>
     <statement>
       <p>
@@ -42,11 +40,9 @@
       </p>
     </answer>
   </task>
-
   <conclusion>
     <p>
       A little wrap up.
     </p>
   </conclusion>
-
 </project>

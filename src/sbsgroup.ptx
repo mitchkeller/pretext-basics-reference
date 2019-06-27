@@ -3,7 +3,6 @@
     <p>
       A short piece of text.
     </p>
-
     <p>
       A longer piece of text.
       It goes on and on and on.
@@ -12,13 +11,11 @@
       but we want to show the width.
     </p>
   </sidebyside>
-
   <sidebyside>
     <p>
       Another little snippet of text.
       This time a bit longer so that it will wrap.
     </p>
-
     <p>
       We're going to keep this paragraph shorter.
     </p>

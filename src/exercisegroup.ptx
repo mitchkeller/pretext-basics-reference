@@ -1,12 +1,10 @@
 <exercises xml:id="ch-sample-exercises">
   <exercisegroup>
-
     <introduction>
       <p>
         Here's where you put the common instructions.
       </p>
     </introduction>
-
     <exercise>
       <statement>
         <p>
@@ -17,7 +15,6 @@
         </p>
       </statement>
     </exercise>
-
     <exercise>
       <statement>
         <p>
@@ -25,7 +22,6 @@
         </p>
       </statement>
     </exercise>
-
     <exercise>
       <statement>
         <p>
@@ -33,9 +29,7 @@
         </p>
       </statement>
     </exercise>
-
   </exercisegroup>
-
   <exercise>
     <statement>
       <p>
@@ -43,5 +37,4 @@
       </p>
     </statement>
   </exercise>
-
 </exercises>
