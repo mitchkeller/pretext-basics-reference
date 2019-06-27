@@ -70,8 +70,7 @@ along with The PBR.  If not, see <http://www.gnu.org/licenses/>.
       Wherever possible,
       the sample code and its output are accompanied by a link to the official <pretext /> documentation
       (typically the
-      <pubtitle><pretext /> Author's Guide</pubtitle>
-      ).
+      <pubtitle><pretext /> Author's Guide</pubtitle>).
     </p>
     <p>
       There are some things that are considered beyond the scope of this reference:
