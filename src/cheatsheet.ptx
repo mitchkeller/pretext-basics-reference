@@ -35,7 +35,9 @@
   <section xml:id="s-about">
     <title>About this reference</title>
     <p>
-      This <pubtitle><pretext /> Basic Reference</pubtitle> is meant to supplement the <pretext /> documentation maintained as part of the official repository.
+      This
+      <pubtitle><pretext /> Basic Reference</pubtitle>
+      is meant to supplement the <pretext /> documentation maintained as part of the official repository.
       Here you will find the <em>basics</em>
       of the most important and commonly used <pretext /> tags.
       In most instances,
@@ -44,7 +46,9 @@
       it is not practical to do this.)
       Wherever possible,
       the sample code and its output are accompanied by a link to the official <pretext /> documentation
-      (typically the <pubtitle><pretext /> Author's Guide</pubtitle>).
+      (typically the
+      <pubtitle><pretext /> Author's Guide</pubtitle>
+      ).
     </p>
 
     <p>
@@ -56,7 +60,8 @@
           This is a <em>basic</em> reference,
           and so we want to keep things simple.
           When you need a more advanced feature not discussed here,
-          follow the link to the appropriate portion of the <pubtitle><pretext /> Author's Guide</pubtitle>.
+          follow the link to the appropriate portion of the
+          <pubtitle><pretext /> Author's Guide</pubtitle>.
         </li>
 
         <li>
@@ -615,9 +620,11 @@
       There's some configuration required use
       <webwork />.
       Please see the
-      <url href="https://pretextbook.org/doc/author-guide/html/webwork.html">relevant chapter of the <pubtitle><pretext /> Author's Guide</pubtitle></url>
+      <url href="https://pretextbook.org/doc/author-guide/html/webwork.html">relevant chapter of the
+      <pubtitle><pretext /> Author's Guide</pubtitle></url>
       and the
-      <url href="https://pretextbook.org/doc/publisher-guide/html/webwork.html">relevant chapter of the <pubtitle><pretext /> Publisher's Guide</pubtitle></url>
+      <url href="https://pretextbook.org/doc/publisher-guide/html/webwork.html">relevant chapter of the
+      <pubtitle><pretext /> Publisher's Guide</pubtitle></url>
       for more details.
       As soon as you add
       <webwork /> exercises,
@@ -1073,7 +1080,8 @@
 
       <p>
         Extensive details are provided in the
-        <url href="https://pretextbook.org/doc/author-guide/html/topic-url.html"><pubtitle><pretext /> Author's Guide</pubtitle></url>.
+        <url href="https://pretextbook.org/doc/author-guide/html/topic-url.html">
+        <pubtitle><pretext /> Author's Guide</pubtitle></url>.
       </p>
     </subsection>
 
@@ -1205,7 +1213,8 @@
       Once a project gets big,
       you may find yourself wishing to break your source into multiple files.
       This is well documented in the
-      <url href="https://pretextbook.org/doc/author-guide/html/processing-modular.html"><pubtitle><pretext /> Author's Guide</pubtitle></url>
+      <url href="https://pretextbook.org/doc/author-guide/html/processing-modular.html">
+      <pubtitle><pretext /> Author's Guide</pubtitle></url>
       , so we refer you there for more details.
     </p>
   </section>
