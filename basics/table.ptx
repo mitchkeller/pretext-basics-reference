@@ -1,5 +1,7 @@
+
+
 <table>
-  <caption>A simple table</caption>
+  <title>A simple table</title>
   <tabular halign="center">
     <row bottom="minor" >
       <cell><m>x</m></cell>
@@ -32,4 +34,6 @@
       <cell>F</cell>
     </row>
   </tabular>
+
 </table>
+

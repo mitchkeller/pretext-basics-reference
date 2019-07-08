@@ -1,8 +1,12 @@
+
+
 <definition>
+
   <notation>
     <usage>\binom{n}{k}</usage>
     <description>binomial coefficient</description>
   </notation>
+
   <statement>
     <p>
       The <term>binomial coefficient</term>
@@ -10,3 +14,4 @@
     </p>
   </statement>
 </definition>
+

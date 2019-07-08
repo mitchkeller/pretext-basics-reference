@@ -1,9 +1,12 @@
+
+
 <figure>
   <caption>A graphic next to a paragraph of
   text.</caption>
   <sidebyside widths="25% 35%" margins="0% 0%"
     valigns="bottom top">
     <image source="images/small_graph" />
+
     <p>
       We can put a paragraph here.
       Yes, a paragraph.
@@ -13,4 +16,6 @@
       Let's hope that this is enough.
     </p>
   </sidebyside>
+
 </figure>
+

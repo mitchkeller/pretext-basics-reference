@@ -1,3 +1,5 @@
+
+
 <example>
   <title>Differentiating a polynomial</title>
   <p>
@@ -5,3 +7,4 @@
     <m>f(x) = 3x^5-7x+5</m> is <m>f'(x) = 15x^4-7</m>.
   </p>
 </example>
+

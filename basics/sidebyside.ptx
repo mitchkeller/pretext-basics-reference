@@ -1,8 +1,11 @@
+
+
 <sidebyside widths="25% 25%" valign="middle">
   <figure>
     <caption>Small graph</caption>
     <image source="images/small_graph" />
   </figure>
+
   <p>
     We can put a paragraph here.
     Yes, a paragraph.
@@ -12,3 +15,4 @@
     Let's hope that this is enough.
   </p>
 </sidebyside>
+

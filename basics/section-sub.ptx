@@ -1,3 +1,5 @@
+
+
 <section>
   <title>Mandatory</title>
   <introduction>
@@ -6,18 +8,21 @@
       (Optional.)
     </p>
   </introduction>
+
   <subsection>
     <title>Mandatory</title>
     <p>
       Subsection content.
     </p>
   </subsection>
+
   <subsection>
     <title>Mandatory</title>
     <p>
       Subsection content.
     </p>
   </subsection>
+
   <conclusion>
     <p>
       Concluding text.
@@ -25,3 +30,4 @@
     </p>
   </conclusion>
 </section>
+

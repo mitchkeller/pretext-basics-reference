@@ -1,7 +1,10 @@
+
+
 <figure xml:id="fig-tikz">
   <caption>A figure generated with TikZ in
   <latex /></caption>
   <image width="15%" xml:id="poset">
+
 <latex-image >
 \begin{tikzpicture}
 \draw (0,0) -- (0,1);
@@ -23,4 +26,6 @@
 \end{tikzpicture}
 </latex-image>
   </image>
+
 </figure>
+
