@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This file is part of the documentation of PreTeXt              -->
+<!--                                                                -->
+<!--         The PreTeXt Guide                                      -->
+<!--                                                                -->
+<!-- Copyright (C) 2013-2019                                        -->
+<!-- Robert A. Beezer, David Farmer, Alex Jordan, Mitchel T. Keller -->
+<!-- See the file COPYING for copying conditions.                   -->
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="guideinfo.xml"/>
+
+    <book xml:id="pretext-guide">
+        <title>The <pretext /> Guide</title>
+
+        <!-- Front Matter -->
+        <!--<xi:include href="frontmatter.xml"/>-->
+
+
+        <!-- The Basics Reference could be split out  -->
+        <!-- into a series of chapters, one per file  -->
+        <!-- with the "part" and "title" obvious here -->
+        <xi:include href="basics-part.xml"/>
+
+<backmatter xml:id="backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Appendices</title>
+
+<appendix>
+        <title>Example List of Notation</title>
+        <notation-list />
+    </appendix>
+    <xi:include href="appendices/gfdl-pretext.xml"/>
+    <index xml:id="the-index">
+        <title>Index</title>
+        <index-list />
+    </index>
+</backmatter>
+
+    </book>
+</pretext>
