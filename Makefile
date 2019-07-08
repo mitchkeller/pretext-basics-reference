@@ -64,8 +64,8 @@ PTXXSL = $(PTX)/xsl
 PTXUSR = $(PTX)/user
 
 
-IMAGESSRC = $(MAINDIR)/src/images
-MAINFILE = $(MAINDIR)/src/ptx-basics-reference.ptx
+IMAGESSRC = $(MAINDIR)/images
+MAINFILE = $(MAINDIR)/basics/guide.xml
 
 # These paths are subdirectories of
 # the scratch directory
