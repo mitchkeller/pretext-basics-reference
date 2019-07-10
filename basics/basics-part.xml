@@ -484,7 +484,7 @@
 
   <chapter xml:id="basics-ch-remark">
     <title>Remark-Like Elements</title>
-    <idx>remark-like elements</idx>
+    <idx>remark-like elements (<tag>convention</tag>, <tag>insight</tag>, <tag>note</tag>, <tag>observation</tag>, <tag>remark</tag>, <tag>warning</tag>)</idx>
 
     <p>
       <pretext/> provides several simple tags that fall into the general category of a <q>remark</q>
@@ -497,17 +497,19 @@
       and then a mixture of <tag>p</tag>, <tag>blockquote</tag>,
       and <tag>pre</tag>.
           <idx>remark</idx>
-          <idx><h>convention</h><see>remark</see></idx>
-          <idx><h>insight</h><see>remark</see></idx> 
-          <idx><h>note</h><see>remark</see></idx>
-          <idx><h>observation</h><see>remark</see></idx>
-          <idx><h>warning</h><see>remark</see></idx>
-          <idx><h>title</h><h>of a remark-like element</h></idx>
+          <idx><h sortby="convention"><tag>convention</tag></h><see>remark-like elements</see></idx>
+          <idx><h sortby="insight"><tag>insight</tag></h><see>remark-like elements</see></idx> 
+          <idx><h sortby="note"><tag>note</tag></h><see>remark-like elements</see></idx>
+          <idx><h sortby="observation"><tag>observation</tag></h><see>remark-like elements</see></idx>
+          <idx><h sortby="warning"><tag>warning</tag></h><see>remark-like elements</see></idx>
+          <idx><h sortby="title"><tag>title</tag></h><h>of a remark-like element</h></idx>
     </p>
 
     <listing xml:id="basics-l-remark">
       <caption>A remark</caption>
-      <idx><h>remark</h><h><pretext/> code for</h></idx>
+      <idx><h sortby="remark"><tag>remark</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h>remark-like elements (<tag>convention</tag>, <tag>insight</tag>, <tag>note</tag>, <tag>observation</tag>, <tag>remark</tag>, <tag>warning</tag>)</h></idx>
+      <idx><h>remark-like elements (<tag>convention</tag>, <tag>insight</tag>, <tag>note</tag>, <tag>observation</tag>, <tag>remark</tag>, <tag>warning</tag>)</h><h><pretext/> code for</h></idx>
 <program>
 <input><xi:include href="remark.ptx" parse="text"/></input>
 </program>
