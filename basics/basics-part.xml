@@ -524,27 +524,31 @@
 
   <chapter xml:id="basics-ch-project">
     <title>Project-Like Elements</title>
-    <idx>project-like elements</idx>
+    <idx>project-like elements (<tag>activity</tag>, <tag>exploration</tag>, <tag>investigation</tag>, <tag>project</tag>)</idx>
 
     <p>
-        <idx>project</idx>
-          <idx><h>activity</h><see>project</see></idx>
-          <idx><h>exploration</h><see>project</see></idx>
-          <idx><h>investigation</h><see>project</see></idx>
       There are four tags that <pretext/> considers to be <q>project-like</q>.
-      They are <tag>activity</tag>, <tag>exploration</tag>, <tag>investigation</tag>, <tag>project</tag>.
-      They allow a general, freeform structure similar to the unstructured <tag>example</tag> in <xref ref="basics-l-example-simple"/>;
+      They are <tag>activity</tag>, <tag>exploration</tag>, <tag>investigation</tag>, <tag>project</tag>.  We will focus on <tag>project</tag> here.
+      These four tags allow a general, freeform structure similar to the unstructured <tag>example</tag> in <xref ref="basics-l-example-simple"/>;
       a structure analogous to that of the structured <tag>example</tag> in <xref ref="basics-l-example-structured"/>;
       and the highly-stuctured <tag>introduction</tag>, <tag>task</tag>, <tag>conclusion</tag> model shown in <xref ref="basics-l-project"/>.
           <idx><h>example</h><h>comparison to project-like elements</h></idx>
+          <idx>project</idx>
+          <idx><h sortby="activity"><tag>activity</tag></h><see>project-like elements</see></idx> 
+          <idx><h sortby="exploration"><tag>exploration</tag></h><see>project-like elements</see></idx> 
+          <idx><h sortby="investigation"><tag>investigation</tag></h><see>project-like elements</see></idx> 
+
     </p>
 
     <listing xml:id="basics-l-project">
       <caption>A project</caption>
-      <idx><h>project</h><h><pretext/> code for</h></idx>
-<program>
-<input><xi:include href="project.ptx" parse="text"/></input>
-</program>
+      <idx><h sortby="project"><tag>project</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h>project-like elements (<tag>activity</tag>, <tag>exploration</tag>, <tag>investigation</tag>, <tag>project</tag>)</h></idx>
+      <idx><h>project-like elements (<tag>activity</tag>, <tag>exploration</tag>, <tag>investigation</tag>, <tag>project</tag>)</h><h><pretext/> code for</h></idx>
+
+		<program>
+		<input><xi:include href="project.ptx" parse="text"/></input>
+		</program>
     </listing>
 
     <p>
