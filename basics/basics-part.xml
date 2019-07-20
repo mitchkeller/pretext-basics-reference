@@ -82,6 +82,8 @@
 
     <listing xml:id="basics-l-p">
       <caption>Some basic content of a paragraph</caption>
+        <idx><h sortby="p"><tag>p</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="p"><tag>p</tag></h></idx>
 
 <program>
 <input><xi:include href="p.ptx" parse="text"/></input>
@@ -102,10 +104,10 @@
       and <tag>subsection</tag> as <term>divisions</term>.
           <idx>division</idx>
           <idx>document structure</idx> 
-          <idx>section</idx>
-          <idx><h>section</h><seealso>division</seealso></idx>
-          <idx><h>subsection</h><see>division</see></idx>
-          <idx><h>chapter</h><see>division</see></idx>
+          <idx sortby="section"><tag>section</tag></idx>
+          <idx><h sortby="section"><tag>section</tag></h><seealso>division</seealso></idx>
+          <idx><h sortby="subsection"><tag>subsection</tag></h><seealso>division</seealso></idx>
+          <idx><h sortby="chapter"><tag>chapter</tag></h><see>division</see></idx>
       They are the key organizational elements of the structure of a <pretext/> document and all have (essentially) the same syntax.
       If a division does not contain any other divisions,
       then its structure looks like what we see in <xref ref="basics-l-section-primitive"/>. (Plenty of other things can go inside other than paragraphs,
@@ -114,18 +116,20 @@
 
     <listing xml:id="basics-l-section-primitive">
       <caption>The general outline of a section as a model division</caption>
-      <idx><h>section</h><h><pretext/> code for</h></idx>
-      <idx><h><pretext/> code for</h><h>section</h></idx>
+      <idx><h sortby="section"><tag>section</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="section"><tag>section</tag></h></idx>
 <program><input><xi:include href="section.ptx" parse="text"/></input> </program>
     </listing>
 
     <p>
-      If a division has other divisions inside it,
+        <idx><h>division</h><h>containing other divisions</h></idx>
+        <idx><h sortby="introduction"><tag>introduction</tag></h><h>of a division</h></idx>
+        <idx><h sortby="conclusion"><tag>conclusion</tag></h><h>of a division</h></idx>
+        If a division has other divisions inside it,
       then the structure is a bit more complicated and regimented.
       In particular,
       if you want text before your first subdivision (<tag>subsection</tag> in this example),
       that text must go inside <tag>introduction</tag>.
-          <idx><h>introduction</h><h>of chapter, section, etc.</h></idx>
       If you want to start with the <tag>subsection</tag>,
       then the <tag>introduction</tag> is optional.
       In the <q>division with subdivisions</q> model,
@@ -136,21 +140,29 @@
 
     <listing xml:id="basics-l-section-sub">
       <caption>A <tag>section</tag> with <tag>subsection</tag>s.</caption>
+      <idx><h sortby="section"><tag>section</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="section"><tag>section</tag></h></idx>
+      <idx><h sortby="subsection"><tag>subsection</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="subsection"><tag>subsection</tag></h></idx>
+      <idx><h sortby="introduction"><tag>introduction</tag></h><h>of a division</h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="introduction"><tag>introduction</tag> of a division</h></idx>
+      <idx><h sortby="conclusion"><tag>conclusion</tag></h><h>of a division</h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="conclusion"><tag>conclusion</tag> of a division</h></idx>
 
 <program><input><xi:include href="section-sub.ptx" parse="text"/></input> </program>
     </listing>
 
     <paragraphs>
-      <title>Limitations on introductions</title>
-      <idx><h>introduction</h><h>of chapter, section, etc.</h><h>limitations</h></idx>
+      <title>Limitations on introductions and conclusions</title>
+      <idx><h sortby="introduction"><tag>introduction</tag></h><h>of a division</h><h>limitations</h></idx>
+      <idx><h sortby="conclusion"><tag>conclusion</tag></h><h>of a division</h><h>limitations</h></idx>
 
       <p>
-        There are a lot of tags that are <em>not</em>
-        allowed in introductions.
+        There are many tags that are <em>not</em>
+        allowed in introductions and conclusions.
         In general, avoid things that would have numbers.
         For instance,
-        one should not put an <tag>example</tag> or an <tag>exercise</tag> in an introduction.
-        Once the schema is correct, this text should be updated.
+        one should not put an <tag>example</tag> or an <tag>exercise</tag> in an introduction or conclusion.
       </p>
     </paragraphs>
 
@@ -207,7 +219,9 @@
       <caption>Displayed equations</caption>
       <idx><h><pretext/> code for</h><h>displayed equation</h></idx>
       <idx><h>equation</h><h>displayed</h><h><pretext/> code for</h></idx>
-<program>
+      <idx><h><pretext/> code for</h><h sortby="me"><tag>me</tag></h></idx>
+      <idx><h sortby="me"><tag>me</tag></h><h><pretext/> code for</h></idx>
+      <program>
 <input><xi:include href="me.ptx" parse="text"/></input>
 </program>
     </listing>
@@ -227,7 +241,12 @@
       <caption>Aligned equations</caption>
       <idx><h><pretext/> code for</h><h>aligned equations</h></idx>
       <idx><h>equation</h><h>aligned</h><h><pretext/> code for</h></idx>
-<program>
+      <idx><h><pretext/> code for</h><h sortby="md"><tag>md</tag></h></idx>
+      <idx><h sortby="md"><tag>md</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="mrow"><tag>mrow</tag></h></idx>
+      <idx><h sortby="mrow"><tag>mrow</tag></h><h><pretext/> code for</h></idx>
+
+      <program>
 <input><xi:include href="md.ptx" parse="text"/></input>
 </program>
     </listing>
@@ -279,6 +298,8 @@
       <idx><h>list</h><h>ordered</h><h><pretext/> code for</h></idx>
       <idx><h>ordered list</h><h><pretext/> code for</h></idx>
       <idx><h><pretext/> code for</h><h>ordered list</h></idx>
+      <idx><h sortby="ol"><tag>ol</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="ol"><tag>ol</tag></h></idx>
 <program>
 <input><xi:include href="ol.ptx" parse="text"/></input>
 </program>
@@ -291,6 +312,7 @@
     <xi:include href="ol.ptx"/>
 
     <p>
+        <idx><h sortby="label"><attr>label</attr></h><h sortby="of ol">of <tag>ol</tag></h></idx>
       You can use the <attr>label</attr> attribute on the <tag>ol</tag> tag to change the default labeling.
       For instance,
       if the opening tag for the list above were <tag>ol label="A"</tag>,
@@ -307,7 +329,9 @@
       <idx><h>list</h><h>unordered</h><h><pretext/> code for</h></idx>
       <idx><h>unordered list</h><h><pretext/> code for</h></idx>
       <idx><h><pretext/> code for</h><h>unordered list</h></idx>
-<program>
+      <idx><h sortby="ul"><tag>ul</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="ul"><tag>ul</tag></h></idx>
+      <program>
 <input><xi:include href="ul.ptx" parse="text"/></input>
 </program>
     </listing>
@@ -323,7 +347,9 @@
     <xi:include href="ul.ptx"/>
 
     <p>
-      You can also use the <attr>cols</attr> attribute to split a list
+        <idx><h sortby="cols"><attr>cols</attr></h><h>of a list</h></idx>
+        <idx><h>list</h><h>arranged in multiple columns</h></idx>
+        You can also use the <attr>cols</attr> attribute to split a list
       (ordered or unordered)
       across multiple columns if the screen/page is suitably wide.
           <idx><h>list</h><h>displayed in columns</h></idx>
@@ -388,7 +414,7 @@
       but a <tag>definition</tag> cannot have a proof.
           <idx>definition</idx>
       You are encouraged to use the <tag>term</tag> tag to set off the word being defined.
-          <idx>term (in a definition)</idx>
+          <idx><h>term</h><h>in a definition</h></idx>
       If you wish to include a list of notation to an appendix as your document,
       you might also add a <tag>notation</tag> tag such as shown in <xref ref="basics-l-definition"/>.
           <idx>notation (to be included in a notation list)</idx>
@@ -751,9 +777,17 @@
 
   <chapter xml:id="basics-ch-fig">
     <title>Figures and Friends</title>
-    <section xml:id="basics-s-fig">
-      <title><tag>figure</tag></title>
+    <section xml:id="basics-s-image">
+        <title><tag>image</tag></title>
+        <idx sortby="image"><tag>image</tag></idx>
+        <p><idx><h sortby="figure"><tag>figure</tag></h><h>without caption</h><see><tag>image</tag></see></idx>
+        <idx><h sortby="image"><tag>image</tag></h><h>without caption</h></idx>
+        It is possible to include an image without a number or caption, centered on its own line by using <tag>image</tag>. In earlier days, <pretext/> required that such an <tag>image</tag> be contained in a <tag>sidebyside</tag>, but that is no longer the case, as this section will demonstrate.</p>
       <p>
+          <idx>graphics formats</idx>
+          <idx sortby="svg"><init>SVG</init> (Scalable Vector Graphics) format</idx>
+          <idx><h sortby="pdf"><init>PDF</init> format</h><h>as image</h></idx>
+          <idx>PNG image format</idx>
         The gold standard for graphics to include in <pretext/> documents is, well,
         complicated.
         If you're only working with <init>HTML</init> output,
@@ -769,9 +803,48 @@
         <init>PNG</init> is also supported by modern web browsers and <latex/>,
         so that's a good option when vector graphic formats like <init>SVG</init> and <init>PDF</init> are not available or appropriate.
       </p>
+      <listing xml:id="basics-l-image">
+          <caption>Code to include an image without a number or caption</caption>
+          <idx><h sortby="image"><tag>image</tag></h><h><pretext/> code for</h></idx>
+          <idx><h><pretext/> code for</h><h sortby="image"><tag>image</tag></h></idx>
+          <idx><h sortby="description"><tag>description</tag></h><h sortby="of image">of <tag>image</tag></h></idx>
+<program>
+<input><xi:include href="image.ptx" parse="text"/></input>
+</program>
+      </listing>
 
+      <p>
+        Use of <attr>width</attr> on an image must be a percentage, and for an <tag>image</tag> as in this example, the percentage is of the current line width. The code in <xref ref="basics-l-image"/> produces the following output:
+      </p>
+
+      <xi:include href="image.ptx"/>
+
+      <p><idx><h sortby="description">description</h><h>for accessibility</h></idx>The example in <xref ref="basics-l-image"/> also illustrates the use of  <tag>description</tag>. We admit to not using a <tag>description</tag> for most of the other <tag>image</tag>s in this Guide, but doing so is strongly recommended for accessibility reasons. A reader who is unable to see the visual element of your book can use assistive technology to have the <tag>description</tag> read to them. As much as is practical, authors should endeavor to include <tag>description</tag>s for their <tag>image</tag>s.
+      </p>
+      <p>
+          <idx><h>file extensions</h><h>for graphics</h></idx>
+          <idx><h>extensions</h><see>file extensions</see></idx>
+        Note that the path to the image file does not include the file extension.
+        When you run <c>xsltproc</c>,
+        the output format you're generating will determine what gets added on so that the right file is grabbed.
+        If your browser says it can't find the image file,
+        make sure that the <init>SVG</init> file is in the correct location relative to the <init>HTML</init> file.
+        Here, we need a directory called <c>images</c> that lives next to our <init>HTML</init> files with a file called <c>small_graph.svg</c> inside that directory.
+        If using a <init>PNG</init> file,
+        put the extension in the filename so that the file is used in both <init>HTML</init> and <latex/>.
+      </p>
+    </section>
+    <section xml:id="basics-s-fig">
+        <title><tag>figure</tag></title>
+        <idx sortby="figure"><tag>figure</tag></idx>
+        <p>To provide a number and caption for an <tag>image</tag>, the <tag>figure</tag> element is used. </p>
       <listing xml:id="basics-l-figure">
-        <caption>Code to include a figure</caption>
+          <caption>Code to include a figure</caption>
+          <idx><h sortby="figure"><tag>figure</tag></h><h><pretext/> code for</h></idx>
+          <idx><h><pretext/> code for</h><h sortby="figure"><tag>figure</tag></h></idx>
+          <idx><h sortby="caption"><tag>caption</tag></h><h sortby="of figure">of <tag>figure</tag></h></idx>
+          <idx><h sortby="image"><tag>image</tag></h><h>inside <tag>figure</tag></h><h><pretext/> code for</h></idx>
+          <idx><h><pretext/> code for</h><h sortby="image (inside figure)"><tag>image</tag> (inside <tag>figure</tag>)</h></idx>
 
 <program>
 <input><xi:include href="figure.ptx" parse="text"/></input>
@@ -784,24 +857,15 @@
 
       <xi:include href="figure.ptx"/>
 
-      <p>
-        Note that the path to the image file does not include the file extension.
-        When you run <c>xsltproc</c>,
-        the output format you're generating will determine what gets added on so that the right file is grabbed.
-        If your browser says it can't find the image file,
-        make sure that the <init>SVG</init> file is in the correct location relative to the <init>HTML</init> file.
-        Here, we need a directory called <c>images</c> that lives next to our <init>HTML</init> files with a file called <c>small_graph.svg</c> inside that directory.
-        If using a <init>PNG</init> file,
-        put the extension in the filename so that the file is used in both <init>HTML</init> and <latex/>.
-      </p>
     </section>
 
     <section xml:id="basics-s-sidebyside">
-      <title><tag>sidebyside</tag></title>
+        <title><tag>sidebyside</tag></title>
+        <idx sortby="sidebyside"><tag>sidebyside</tag></idx>
       <p>
         One of the more complex pieces of code in <pretext/>,
         by most accounts, is that used for positioning objects
-        (usually figures)
+        (frequently <tag>image</tag> and <tag>tabular</tag>, but also <tag>p</tag>)
         next to each other.
         If you've tried to do this in <latex/>, you know that it can be challenging on a good day.
         Fortunately,
@@ -818,6 +882,12 @@
 
       <listing xml:id="basics-l-sbs">
         <caption>Code to place things side by side</caption>
+        <idx><h sortby="sidebyside"><tag>sidebyside</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="sidebyside"><tag>sidebyside</tag></h></idx>
+        <idx><h sortby="figure"><tag>figure</tag></h><h sortby="inside sidebyside">inside <tag>sidebyside</tag></h></idx>
+        <idx><h sortby="p"><tag>p</tag></h><h sortby="inside sidebyside">inside <tag>sidebyside</tag></h></idx>
+        <idx><h sortby="sidebyside"><tag>sidebyside</tag></h><h sortby="containing figure">containing <tag>figure</tag></h></idx>
+        <idx><h sortby="sidebyside"><tag>sidebyside</tag></h><h sortby="containing p">containing <tag>p</tag></h></idx>
 
 <program>
 <input><xi:include href="sidebyside.ptx" parse="text"/></input>
@@ -832,6 +902,10 @@
 
       <listing xml:id="basics-l-sbs2">
         <caption>A few more bells and whistles for <tag>sidebyside</tag></caption>
+        <idx><h sortby="sidebyside"><tag>sidebyside</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="sidebyside"><tag>sidebyside</tag></h></idx>
+        <idx><h sortby="figure"><tag>figure</tag></h><h sortby="containing sidebyside">containing <tag>sidebyside</tag></h></idx>
+        <idx><h sortby="sidebyside"><tag>sidebyside</tag></h><h sortby="inside figure">inside <tag>figure</tag></h></idx>
 
 <program>
 <input><xi:include href="sidebyside2.ptx" parse="text"/></input>
@@ -844,19 +918,16 @@
 
       <xi:include href="sidebyside2.ptx"/>
 
-      <p>
-        Another use for <tag>sidebyside</tag> occurs when you want to center a graphc or tabular environment
-        (or a number of other things)
-        on a line by itself but without a <tag>caption</tag> and number.
-      </p>
-
-      <p>
-        It is also possible to create a group of <tag>sidebyside</tag> tags with common <attr>widths</attr> by using the <tag>sbsgroup</tag> tag.
+      <p><idx>side-by-side group</idx>
+      <idx><h>side-by-side group</h><seealso><tag>sbsgroup</tag></seealso></idx>
+          For a layout with multiple rows (but the same <attr>widths</attr> for each row, <pretext/> provides the side-by-side group using <tag>sbsgroup</tag>.
       </p>
 
       <listing xml:id="basics-l-sbsgroup">
         <caption>Use of <tag>sbsgroup</tag></caption>
-
+        <idx><h sortby="sbsgroup"><tag>sbsgroup</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="sbsgroup"><tag>sbsgroup</tag></h></idx>
+        
 <program>
 <input><xi:include href="sbsgroup.ptx" parse="text"/></input>
 </program>
@@ -870,8 +941,12 @@
     </section>
 
     <section xml:id="basics-s-latex-fig">
-      <title><latex/>-generated images</title>
-      <p>
+        <title><latex/>-generated images</title>
+        <idx><h sortby="latex"><latex/></h><h>using to generate images</h></idx>
+        <p>
+            <idx>TikZ</idx>
+            <idx sortby="mbx script"><c>mbx</c> script</idx>
+            <idx><h>graphics formats</h><h>generating from <latex/> source</h></idx>
         <pretext/> makes it straightforward to embed <latex/> code that produces images
         (such as TikZ)
         into your source files. <c>xsltproc</c> basically just dumps your code out to your <latex/> file so that it compiles nicely.
@@ -883,7 +958,8 @@
         so settle in with an experienced user before attempting the steps in this section.
       </p>
       <aside>
-        <title>The <c>mbx</c> script</title>
+          <title>The <c>mbx</c> script</title>
+          <idx><h sortby="mbx script"><c>mbx</c> script</h><h>prerequisites</h></idx>
         <p>
           The <c>mbx</c> script has a number of prerequisites to use its full power.
           As a baseline, <c>python</c> is required.
@@ -911,11 +987,15 @@
           but it will likely be required on macOS and Windows unless you've set up your SageMath install so you can run it from the command line by simply executing <c>sage</c>.
         </p>
       </aside>
-      <p>
+      <p><idx sortby="latex-image-preamble"><tag>latex-image-preamble</tag></idx>
+      <idx sortby="docinfo"><tag>docinfo</tag></idx>
+      <idx><h>TikZ</h><h sortby="loading in latex-image-preamble">loading in <tag>latex-image-preamble</tag></h></idx>
         Our example here just illustrates using TikZ to make a simple figure
         (the Hasse diagram of a poset),
         but lots of other <latex/> graphics packages can be used.
-        One step required is to put
+        One step required is to put the following three lines in the <tag>docinfo</tag> tag of your main file. <tag>latex-image-preamble</tag> is used to set up the preamble that should be used for making <init>SVG</init> images from your <pretext/> source.
+        Macros that you wish to use more broadly should be put inside <tag>macros</tag> inside <tag>docinfo</tag>.
+
       </p>
 
 <pre>
@@ -924,14 +1004,11 @@
 &lt;/latex-image-preamble&gt;
 </pre>
 
-      <p>
-        in the <tag>docinfo</tag> tag of your main file. <tag>latex-image-preamble</tag> is used to set up the preamble that should be used for making <init>SVG</init> images from your <pretext/> source.
-        Macros that you wish to use more broadly should be put inside <tag>macros</tag> inside <tag>docinfo</tag>.
-      </p>
-
       <listing xml:id="basics-l-tikz">
         <caption>How to use <tag>latex-image</tag> to invoke TikZ</caption>
-
+        <idx><h sortby="latex-image"><tag>latex-image</tag></h><h><pretext/> code for</h></idx>
+                <idx><h><pretext/> code for</h><h sortby="latex-image"><tag>latex-image</tag></h></idx>
+                <idx><h>TikZ</h><h sortby="inside latex-image">inside <tag>latex-image</tag></h></idx>
 <program>
 <input><xi:include href="tikz.ptx" parse="text"/></input>
 </program>
@@ -970,18 +1047,18 @@
 
   <chapter xml:id="basics-ch-table">
     <title>Tables</title>
-    <idx>tables</idx>
+    <idx sortby="table"><tag>table</tag></idx>
 
     <p>
       After <tag>sidebyside</tag>,
       getting tables to lay out consistently between <init>HTML</init> and <init>PDF</init> is probably the second biggest headache that <pretext/> takes care of for us behind the scenes.
-      Lots of effort has been taken in order to fix some of the challenges inherent to working with the <tag>tabular</tag> environment in <latex/>, and so if you author in <pretext/>,
+      Considerable effort has been taken in order to fix some of the challenges inherent to working with the <tag>tabular</tag> environment in <latex/>, and so if you author in <pretext/>,
       you should be able to forget the hacks you had to learn to make nice tables in <latex/>.
     </p>
 
     <p>
-          <idx><h>table</h><h>not for visual layout</h></idx>
-          <idx><h>table</h><h>not for visual layout</h><seealso>side-by-side group</seealso></idx><alert>Tables should only be used to display data.</alert> Too often in other authoring systems, tables are used as a crutch to facilitate the visual layout of a page.
+          <idx><h sortby="table"><tag>table</tag></h><h>not for visual layout</h></idx>
+          <idx><h sortby="table"><tag>table</tag></h><h>not for visual layout</h><seealso>side-by-side group</seealso></idx><alert>Tables should only be used to display data.</alert> Too often in other authoring systems, tables are used as a crutch to facilitate the visual layout of a page.
       Do <em>not</em> do that when authoring <pretext/>.
       A good question to ask yourself before using a <tag>tabular</tag> is
       <q>Do the <m>xy</m>-coordinates of a cell have semantic meaning in terms of my data?</q>
@@ -995,12 +1072,13 @@
 
     <listing xml:id="basics-l-table">
       <caption>Code to produce a table</caption>
-      <idx>tables</idx>
-      <idx><h>tables</h><h><pretext/> code for</h></idx>
-      <idx><h><pretext/> code for</h><h>tables</h></idx>
-      <idx><h>caption</h><h>of a table</h></idx>
-      <idx><h>tables</h><h>caption</h></idx>
-      <idx>tabular</idx>
+      <idx><h sortby="table"><tag>table</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="table"><tag>table</tag></h></idx>
+      <idx><h sortby="title"><tag>title</tag></h><h>of a table</h></idx>
+      <idx><h sortby="caption"><tag>caption</tag></h><h sortby="of table">of <tag>table</tag></h><see><tag>title</tag></see></idx>
+      <idx><h sortby="table"><tag>table</tag></h><h sortby="title"><tag>title</tag></h></idx>
+      <idx><h sortby="tabular"><tag>tabular</tag></h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="tabular"><tag>tabular</tag></h></idx>
       <idx><h>row</h><h>of a table</h></idx>
       <idx><h>cell</h><h>of a table</h></idx>
       <idx><h>entry of a table</h><see>cell</see></idx>
@@ -1015,6 +1093,32 @@
 
     <xi:include href="table.ptx"/>
 
+    <p><idx><h sortby="table"><tag>table</tag></h><h>without title or caption</h><see><tag>tabular</tag></see></idx>
+    <idx><h sortby="tabular"><tag>tabular</tag></h><h>without title or caption</h></idx>
+    Much like <tag>image</tag>, you can use <tag>tabular</tag> on its own to lay out a table of data, centered on a line, between (for instance) a couple of <tag>p</tag> elements. In many cases, the sort of data layout generated using <tag>tabular</tag> functions more as a figure than a table according to the definitions in the <pubtitle>Chicago Manual of Style</pubtitle> (CMOS), which <pretext/> attempts to follow in the absence of other guiding principles. The quote below from David Farmer on the <url href="https://groups.google.com/forum/#!searchin/pretext-dev/CMOS$20table%7Csort:date/pretext-dev/w1e4dERKZ6M/gt_WhA9sCAAJ">pretext-dev Google Group</url> provides guidance on deciding if your <tag>tabular</tag> should be contained in <tag>figure</tag> or <tag>table</tag>.
+        </p>
+        <blockquote>
+            <idx><h sortby="table"><tag>table</tag></h><h>deciding when to use instead of <tag>figure</tag></h></idx>
+            <p><lq/>There is an entire chapter on tables in CMOS, so I'll try to 
+            summarize how those are distinct from many uses of grids of 
+            numbers in PreTeXt.  Some approximate quotes about tables from CMOS: 
+            <ul>
+                <li>facts that are easy to scan and compare</li>
+                <li>a reader unfamiliar with the material should still be ale to make 
+                sense of the table </li>
+                <li>tables are numbered and have titles (and not captions) </li>
+            </ul>
+            </p>
+            <p>My take-away is that a CMOS table is a supplement to what is written 
+            in the text and at any one time only a small amount of the table is 
+            relevant.  Rephrasing: a CMOS table is not intended to be integrated 
+            with the narrative of the book, and the reader is not supposed to 
+            pore over a large fraction of the table when it is first encountered.<rq/>
+            </p>
+            <attribution>David Farmer</attribution>
+        </blockquote>
+        <p>In reality, the <tag>tabular</tag> in <xref ref="basics-l-table"/> really should be contained in <tag>figure</tag> (and then the <tag>title</tag> must become a <tag>caption</tag>). Perhaps someday we will come up with an example <tag>tabular</tag> that meets the CMOS definition of a table to use instead.</p>
+        
     <p>
           <idx><h>column</h><h>of a table</h></idx>
       See <xref ref="topic-tabular"/> for more information about how to make more complicated tables including formatting columns and vertical and horizontal rules.
