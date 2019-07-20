@@ -157,7 +157,7 @@
     <paragraphs>
       <title>The role of <tag>p</tag> tags</title>
       <idx>paragraph</idx>
-      <idx><tag>p</tag> tag</idx>
+      <idx sortby="p"><tag>p</tag></idx>
 
       <p>
         One of the things you'll need to keep an eye out for is when things must be wrapped in <tag>p</tag> (paragraph) tags.
@@ -1113,7 +1113,14 @@
 
     <section xml:id="basics-s-xref">
       <title>Cross references</title>
+      <idx><h>cross reference</h><h>in text</h></idx>
+      <idx>internal cross reference</idx>
+      <idx><h>link</h><h>internal</h><see>cross reference</see></idx>
+      
       <p>
+        <idx><h>label</h><see>xml:id</see></idx>
+        <idx><h sortby="ref"><attr>ref</attr></h></idx>
+        <idx sortby="xmlid"><attr>xml:id</attr></idx>
         <pretext/> provides a robust set of features for internal cross referencing.
         If you're familiar with <latex/>,
         the equivalent of <c>\label</c> is to use an <attr>xml:id</attr>.
@@ -1138,7 +1145,13 @@
 
     <section>
       <title>External links</title>
+      <idx><h>external link</h></idx>
+      <idx><h>link</h><h>external</h></idx>
+      <idx><h>hyperlinks</h><see>cross reference</see></idx>
+      <idx><h>hyperlinks</h><see>external link</see></idx>
       <p>
+        <idx sortby="url"><tag>url</tag></idx>
+        <idx sortby="href"><attr>href</attr></idx>
         If you want to provide a link to a resource outside of your project,
         you will want the <tag>url</tag> tag.
         The code <tage>url href="https://pretextbook.org"</tage> produces <url href="https://pretextbook.org"/>.
@@ -1152,7 +1165,8 @@
     <section xml:id="basics-s-fn">
       <title>Footnotes and asides</title>
       <idx>footnote</idx>
-      <idx><tag>fn</tag> tag</idx>
+      <idx><h>footnote</h><h>long</h><see>aside</see></idx>
+      <idx sortby="fn"><tag>fn</tag></idx>
 
       <p>
         Footnotes are not too hard,
@@ -1174,8 +1188,8 @@
         A good alternative for longer things that are somewhat digressional is the <term>aside</term>,
             <idx>aside</idx>
         which comes in three flavors: <tag>aside</tag>, <tag>biographical</tag>, <tag>historical</tag>.
-            <idx><h>historical</h><see>aside</see></idx>
-            <idx><h>biographical</h><see>aside</see></idx>
+            <idx><h sortby="historical"><tag>historical</tag></h><see>aside</see></idx>
+            <idx><h sortby="biographical"><tag>biographical</tag></h><see>aside</see></idx>
         Each of these allows an optional title and then a variety of tags such as <tag>p</tag>, <tag>figure</tag>,
         and <tag>sidebyside</tag> (and many more).
       </p>
@@ -1183,6 +1197,7 @@
       <listing xml:id="basics-l-aside">
         <caption>A sample <tag>aside</tag></caption>
         <idx><h>aside</h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h>aside</h></idx>
 <program>
 <input><xi:include href="aside.ptx" parse="text"/></input>
 </program>
@@ -1198,7 +1213,12 @@
 
     <section xml:id="basics-s-idx">
       <title>Index entries</title>
+      <idx><h>index entries</h></idx>
+      <idx sortby="idx"><tag>idx</tag></idx>
+      <idx><h><em>see</em> reference in index</h><see><tag>see</tag></see></idx>
       <p>
+        <idx><h sortby="h"><tag>h</tag></h></idx>
+        <idx><h>subheadings (in index)</h></idx>
         <pretext/> does a good job of supporting index generation.
         You still need to tag everything that should get an index entry by hand,
         but then the index is produced automatically.
@@ -1207,13 +1227,28 @@
         If you need an index entry involving subheadings,
         such as <q>normal</q> under <q>subgroup</q>,
         use <c>&lt;idx&gt;&lt;h&gt;subgroup&lt;/h&gt;&lt;h&gt;normal&lt;/h&gt;&lt;idx&gt;</c>.
+      </p>
+      
+      <p>
+        <idx sortby="see"><tag>see</tag></idx>
+        <idx sortby="seealso"><tag>seealso</tag></idx>
+        <idx><h>cross reference</h><h>in index</h></idx>
         It is also possible to use <q>see</q>
         and <q>see also</q> entries for indices.
         For instance, in <xref ref="basics-ch-basic-formatting"/>,
         we use <c>            &lt;idx&gt;&lt;h&gt;font&lt;/h&gt;&lt;see&gt;formatting&lt;/see&gt;&lt;/idx&gt;</c> to create an index entry for <q>font</q>
         that instructs the reader to <q><em>see </em> formatting</q>.
+        A <q><em>see also</em></q> can be created using the <tag>seealso</tag> tag instead of <tag>see</tag>.
       </p>
-
+      
+      <p>
+        <idx sortby="sortby"><attr>sortby</attr></idx>
+        <idx><h>sorted index entries</h></idx>
+        <idx><h>alphabetized index entries</h></idx>
+        If the index entry is in danger of being alphabetized incorrectly, you can specify how it should be sorted with the <attr>sortby</attr> attribute. 
+        For example, to give an index entry to <m>\Sigma</m> in the <q>s</q> section, you would use <c>&lt;idx sortby="sigma"&gt;&lt;m&gt;\Sigma&lt;/m&gt;&lt;/idx&gt;</c>.  Note that if the index entry has <tag>h</tag> tags, the <attr>sortby</attr> attribute should go there, not on <tag>idx</tag>.
+      </p>
+      
       <p>
         If you generate <latex/> output,
         the index is generated without any additional passes beyond the usual two required to get references correct.
@@ -1223,9 +1258,14 @@
     <section>
       <title>Quotations</title>
       <idx>quotations</idx>
+      <idx><h>free standing quotation</h><see>blockquote</see></idx>
 
       <p>
-        To ensure that quotation marks are poperly typeset,
+        <idx><h>quotation mark</h><h>single</h></idx>
+        <idx><h>quotation mark</h><h>double</h></idx>
+        <idx><h>quotations</h><h>inline</h></idx>
+        <idx><h>quotations</h><h>long</h><see>blockquote</see></idx>
+        To ensure that quotation marks are properly typeset,
         it is important to use the correct <pretext/> code.
         To set something off in double quotes,
         use the <tag>q</tag> tag around what should appear in quotes.
@@ -1236,8 +1276,6 @@
         you may find yourself needing to explicitly access the left and right single and double quotation marks.
         They are, quite sensibly, <tag>lq</tag>, <tag>rq</tag>, <tag>lsq</tag>,
         and <tag>rsq</tag>.
-            <idx><h>quote</h><h>single</h></idx>
-            <idx><h>quote</h><h>double</h></idx>
       </p>
 
       <p>
@@ -1247,6 +1285,7 @@
       <listing xml:id="basics-l-blockquote">
         <caption>A sample <tag>blockquote</tag></caption>
         <idx><h>blockquote</h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h>blockquote</h></idx>
 <program>
 <input><xi:include href="blockquote.ptx" parse="text"/></input>
 </program>
