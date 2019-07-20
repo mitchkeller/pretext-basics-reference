@@ -681,11 +681,17 @@
   </chapter>
 
   <chapter xml:id="basics-ch-rename">
-    <title>Renaming Elements</title>
-    <p>
+      <title>Renaming Elements</title>
+      <idx sortby="rename"><tag>rename</tag></idx>
+      <idx><h>porism</h><h>renaming another tag to obtain</h></idx>
+      <p>
+          <idx><h sortby="rename"><tag>rename</tag></h><h><pretext/> code for</h></idx>
+          <idx><h><pretext/> code for</h><h sortby="rename"><tag>rename</tag></h></idx>
+
+          <idx sortby="docinfo"><tag>docinfo</tag></idx>
       The preceding sections have provided a lengthy list of <pretext/> tags that behave interchangeably.
       Perhaps you don't like one of their names.
-      If your project will not involve any <tag>algorithm</tag>s, but you need another theorem-like tag whose name you would like to have rendered as <q>Porism</q>.
+      For instance, suppose your project will not involve any <tag>algorithm</tag>s, but you need another theorem-like tag whose name you would like to have rendered as <q>Porism</q>.
       To do this, you need to add a <tag>rename</tag> tag to the <tag>docinfo</tag> block of your code.
       For our example,
       the necessary code would be <c>&lt;rename element="algorithm"&gt;Porism&lt;/rename&gt;</c>.
