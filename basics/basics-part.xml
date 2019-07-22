@@ -1039,10 +1039,13 @@
         (on a single line).
       </p>
 
-      <sidebyside widths="80%" margins="10% 10%">
+      <sidebyside width="80%" margins="10% 10%">
 
-<pre>[path to mathbook]/script/mbx -c latex-image -f svg
--d ./images [path to PTX source file]</pre>
+        <!-- <idx><h><c>mbx</c> script</h><h>for latex-image</h></idx> -->
+<pre>
+  [path to mathbook]/script/mbx -c latex-image -f svg
+-d ./images [path to PTX source file]
+</pre>
       </sidebyside>
 
       <p>
@@ -1135,7 +1138,12 @@
     <title>SageMath Content</title>
     <section xml:id="basics-s-sage-cell">
       <title>SageMathCells</title>
+      <idx><h>SageMathCell</h><h>interactive</h></idx>
+      <idx><h>SageMathCell</h><h>for static images</h><see><tag>sageplot</tag></see></idx>
+      <idx><h>interactive sage code</h><see><tag>sage</tag></see></idx>
       <p>
+        <idx sortby="input"><tag>input</tag></idx>
+        <idx sortby="output"><tag>output</tag></idx>
         Including computational SageMath cells is pretty easy with <tag>sage</tag>, <tag>input</tag>,
         and <tag>output</tag>.
         The last tag is useful for producing a <init>PDF</init> that includes the result of the code's execution.
@@ -1143,7 +1151,8 @@
 
       <listing xml:id="basics-l-sage">
         <caption>SageMath cell</caption>
-
+        <idx><h sortby="sage"><tag>sage</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="sage"><tag>sage</tag></h></idx>
 <program>
 <input><xi:include href="sage.ptx" parse="text"/></input>
 </program>
@@ -1174,13 +1183,16 @@
 
       <listing xml:id="basics-l-sageplot">
         <caption><tag>sageplot</tag> to produce a graphic</caption>
-
+        <idx><h sortby="sageplot"><tag>sageplot</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="sageplot"><tag>sageplot</tag></h></idx>
 <program>
 <input><xi:include href="sageplot.ptx" parse="text"/></input>
 </program>
       </listing>
 
       <p>
+        <idx><h><c>mbx</c> script</h></idx>
+        
         We need to run the <c>mbx</c> script to actually make the image files required.
         If you want to make both <init>HTML</init> and <init>PDF</init> via <latex/>, you'll need to run it twice.
         The first command below (again,
@@ -1191,6 +1203,8 @@
         It's best to stay away from error-producing steps until you're comfortable with debugging your system.
       </p>
 
+      <!-- <idx><h><c>mbx</c> script</h><h>for sageplot to svg</h></idx> -->
+      <!-- <idx><h><c>mbx</c> script</h><h>for sageplot to pdf</h></idx> -->
       <sidebyside widths="80%" margins="10% 10%">
 
 <pre>[path to mathbook]/script/mbx -c sageplot -f svg
@@ -1275,7 +1289,7 @@
     <section xml:id="basics-s-fn">
       <title>Footnotes and asides</title>
       <idx>footnote</idx>
-      <idx><h>footnote</h><h>long</h><see>aside</see></idx>
+      <idx><h>footnote</h><h>long</h><see><tag>aside</tag></see></idx>
       <idx sortby="fn"><tag>fn</tag></idx>
 
       <p>
@@ -1296,18 +1310,18 @@
         Because of the restrictions on footnotes,
         it is important to keep them short.
         A good alternative for longer things that are somewhat digressional is the <term>aside</term>,
-            <idx>aside</idx>
+            <idx sortby="aside"><tag>aside</tag></idx>
         which comes in three flavors: <tag>aside</tag>, <tag>biographical</tag>, <tag>historical</tag>.
-            <idx><h sortby="historical"><tag>historical</tag></h><see>aside</see></idx>
-            <idx><h sortby="biographical"><tag>biographical</tag></h><see>aside</see></idx>
+            <idx><h sortby="historical"><tag>historical</tag></h><see><tag>aside</tag></see></idx>
+            <idx><h sortby="biographical"><tag>biographical</tag></h><see><tag>aside</tag></see></idx>
         Each of these allows an optional title and then a variety of tags such as <tag>p</tag>, <tag>figure</tag>,
         and <tag>sidebyside</tag> (and many more).
       </p>
 
       <listing xml:id="basics-l-aside">
         <caption>A sample <tag>aside</tag></caption>
-        <idx><h>aside</h><h><pretext/> code for</h></idx>
-        <idx><h><pretext/> code for</h><h>aside</h></idx>
+        <idx><h sortby="aside"><tag>aside</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h><tag>aside</tag></h></idx>
 <program>
 <input><xi:include href="aside.ptx" parse="text"/></input>
 </program>
@@ -1324,11 +1338,14 @@
     <section xml:id="basics-s-idx">
       <title>Index entries</title>
       <idx><h>index entries</h></idx>
+      <idx><h>index entries</h><h><pretext/> code for</h></idx>
       <idx sortby="idx"><tag>idx</tag></idx>
       <idx><h><em>see</em> reference in index</h><see><tag>see</tag></see></idx>
       <p>
         <idx><h sortby="h"><tag>h</tag></h></idx>
         <idx><h>subheadings (in index)</h></idx>
+        <idx><h><pretext/> code for</h><h>index entries</h></idx>
+        <idx><h><pretext/> code for</h><h><tag>idx</tag></h></idx>
         <pretext/> does a good job of supporting index generation.
         You still need to tag everything that should get an index entry by hand,
         but then the index is produced automatically.
@@ -1368,13 +1385,13 @@
     <section>
       <title>Quotations</title>
       <idx>quotations</idx>
-      <idx><h>free standing quotation</h><see>blockquote</see></idx>
+      <idx><h>free standing quotation</h><see><tag>blockquote</tag></see></idx>
 
       <p>
         <idx><h>quotation mark</h><h>single</h></idx>
         <idx><h>quotation mark</h><h>double</h></idx>
         <idx><h>quotations</h><h>inline</h></idx>
-        <idx><h>quotations</h><h>long</h><see>blockquote</see></idx>
+        <idx><h>quotations</h><h>long</h><see><tag>blockquote</tag></see></idx>
         To ensure that quotation marks are properly typeset,
         it is important to use the correct <pretext/> code.
         To set something off in double quotes,
@@ -1394,8 +1411,8 @@
 
       <listing xml:id="basics-l-blockquote">
         <caption>A sample <tag>blockquote</tag></caption>
-        <idx><h>blockquote</h><h><pretext/> code for</h></idx>
-        <idx><h><pretext/> code for</h><h>blockquote</h></idx>
+        <idx><h sortby="blockquote"><tag>blockquote</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h><tag>blockquote</tag></h></idx>
 <program>
 <input><xi:include href="blockquote.ptx" parse="text"/></input>
 </program>
