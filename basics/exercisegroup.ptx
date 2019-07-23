@@ -13,6 +13,8 @@
         <p>
           First exercise.
           The <c>statement</c> is mandatory.
+          <idx><h sortby="statement"><tag>statement</tag></h><h>of an exercise</h></idx>
+          <idx><h sortby="exercise"><tag>exercise</tag></h><h sortby="statement"><tag>statement</tag></h></idx>
           You can add all the usual bells and whistles after,
           but we'll keep it short here.
         </p>
