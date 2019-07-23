@@ -722,6 +722,8 @@
 
   <chapter xml:id="basics-ch-webwork">
     <title><webwork/> Exercises</title>
+    <idx><webwork/> exercise</idx>
+    <idx><h sortby="exercise"><tag>exercise</tag></h><h><webwork/></h></idx>
     <p>
       It is possible to embed
       <webwork/> exercises into a <pretext/> document.
@@ -745,6 +747,9 @@
     <listing xml:id="basics-l-webwork-opl">
       <caption>A
       <webwork/> exercise living on the server</caption>
+      <idx><h><webwork/> exercise</h><h>on a server</h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h><webwork/> exercise</h><h>on a server</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="exercise"><tag>exercise</tag></h><h><webwork/> (on a server)</h></idx>
 
 <program>
 <input><xi:include href="webwork-opl.ptx" parse="text"/></input>
@@ -768,6 +773,9 @@
     <listing xml:id="basics-l-webwork-code">
       <caption>A simple
       <webwork/> exercise coded in <pretext/> source</caption>
+      <idx><h><webwork/> exercise</h><h>in <pretext/> source</h><h><pretext/> code for</h></idx>
+      <idx><h><pretext/> code for</h><h><webwork/> exercise</h><h>in <pretext/> source</h></idx>
+      <idx><h><pretext/> code for</h><h sortby="exercise"><tag>exercise</tag></h><h><webwork/> (in <pretext/> source)</h></idx>
 
 <program>
 <input><xi:include href="webwork-code.ptx" parse="text"/></input>
