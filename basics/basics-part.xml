@@ -586,11 +586,11 @@
 
   <chapter xml:id="basics-ch-exercise">
     <title>Exercises</title>
-    <idx>exercise</idx>
+    <idx sortby="exercise"><tag>exercise</tag></idx>
 
     <section>
       <title>Inline exercises</title>
-      <idx><h>exercise</h><h>inline</h></idx>
+      <idx><h sortby="exercise"><tag>exercise</tag></h><h>inline</h></idx>
       <idx><h>inline exercise</h></idx>
 
       <p>
@@ -602,13 +602,14 @@
         </fn> You can also put a bunch of <tag>exercise</tag>s inside an <tag>exercises</tag> tag within a division,
         which is the typical way for creating a bunch of exercises togther at the end of a section.
             <idx><h>checkpoint</h><see>inline exercise</see></idx>
+            <idx>inline exercise<h>checkpoint</h></idx>
       </p>
 
       <listing xml:id="basics-l-exercise">
         <caption>An exercise</caption>
-        <idx><h>exercise</h><h><pretext/> code for</h></idx>
+        <idx><h sortby="exercise"><tag>exercise</tag></h><h><pretext/> code for</h></idx>
         <idx><h>inline exercise</h><h><pretext/> code for</h></idx>
-        <idx><h><pretext/> code for</h><h>exercise</h><h>inline</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="exercise"><tag>exercise</tag></h><h>inline</h></idx>
 <program>
 <input><xi:include href="exercise.ptx" parse="text"/></input>
 </program>
@@ -626,9 +627,9 @@
             <idx><h>hint</h><h>to exercise</h></idx>
             <idx><h>answer</h><h>to exercise</h></idx>
             <idx><h>solution</h><h>to exercise</h></idx> 
-            <idx><h>exercise</h><h>hint</h></idx>
-            <idx><h>exercise</h><h>answer</h></idx> 
-            <idx><h>exercise</h><h>solution</h></idx>
+            <idx><h sortby="exercise"><tag>exercise</tag></h><h sortby="answer"><tag>answer</tag></h></idx> 
+            <idx><h sortby="exercise"><tag>exercise</tag></h><h sortby="hint"><tag>hint</tag></h></idx>            
+            <idx><h sortby="exercise"><tag>exercise</tag></h><h sortby="solution"><tag>solution</tag></h></idx>
         But you must put all the <tag>hint</tag>s first,
         then all the <tag>answer</tag>s, and then all the <tag>solution</tag>s.
         There are a variety of options for determining where hints,
@@ -641,11 +642,12 @@
     <section xml:id="basics-s-exgp">
       <title><tag>exercisegroup</tag></title>
       <idx>exercise group</idx>
+      <idx sortby="exercisegroup"><tag>exercisegroup</tag></idx>
 
       <p>
         Sometimes you have several exercises that should all have a common set of instructions,
         which is when you will use the <tag>exercisegroup</tag> tag.
-            <idx><h>exercise group</h><h>instructions</h></idx>
+            <idx><h sortby="exercisegroup"><tag>exercisegroup</tag></h><h>instructions</h></idx>
         An <tag>exercisegroup</tag> can only be placed inside an <tag>exercises</tag> element, however!
         The portion of this section headed as
         <q><xref ref="basics-s-sample-exercises" text="global"/> Exercises</q>
@@ -654,8 +656,8 @@
 
       <listing xml:id="basics-l-exercisegroup">
         <caption>Using an <tag>exercisegroup</tag>.</caption>
-        <idx><h>exercise group</h><h><pretext/> code for</h></idx>
-        <idx><h><pretext/> code for</h><h>exercise</h><h>group</h></idx>
+        <idx><h sortby="exercisegroup"><tag>exercisegroup</tag></h><h><pretext/> code for</h></idx>
+        <idx><h><pretext/> code for</h><h sortby="exercisegroup"><tag>exercisegroup</tag></h></idx>
 <program>
 <input><xi:include href="exercisegroup.ptx" parse="text"/></input>
 </program>
@@ -666,7 +668,7 @@
         you can add a <attr>cols</attr> attribute to the <tag>exercisegroup</tag> of the form <attr>cols="3"</attr>.
         The integer value of <attr>cols</attr> must be between 2 and 6
         (inclusive).
-            <idx><h>exercise group</h><h>columns</h></idx>
+            <idx><h sortby="exercisegroup"><tag>exercisegroup</tag></h><h>columns</h></idx>
             <idx><h>column</h><h>of an exercise group</h></idx>
       </p>
 
